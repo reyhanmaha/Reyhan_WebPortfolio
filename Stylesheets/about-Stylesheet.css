@@ -1,0 +1,9 @@
+.Intro{
+    height: 70vh;
+    background-color: rgb(115, 63, 163);
+    align-items: center;
+}
+.Introcard{
+    margin-top: 15%;
+    margin-left: 15%;
+}

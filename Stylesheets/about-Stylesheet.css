@@ -1,9 +1,80 @@
+body{
+    background-color: rgb(22, 121, 171);
+}
 .Intro{
-    height: 70vh;
-    background-color: rgb(115, 63, 163);
+    background-color: rgb(93, 235, 215);
     align-items: center;
+    width: 75vw;
+    
+    margin-left: 2vw;
+    margin-top: 3vh;
 }
 .Introcard{
-    margin-top: 15%;
-    margin-left: 15%;
+   height: 120vh;
+   margin-left: 10%;
+   margin-top: 5vh;
+   border-style: groove;
+   border-radius: 5%;
 }
+.Introcard img{
+    height: 25vh;
+    width: 20vw;
+    
+    border-radius: 50%;
+}
+.Introcard h2{
+    font-family:'cactus-classical-serif-regular';
+}
+ul{
+    list-style-type: none;
+
+}
+.border-success {
+    --bs-border-opacity: 1;
+    border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+  }
+li{
+    font-family: 'cactus-classical-serif-regular';
+}
+p{
+    font-family: 'cactus-classical-serif-regular';
+}
+.features{
+    margin-top: 5vh;
+    
+}
+.contact{
+    background-color: rgb(93, 235, 215);
+    width: 50vw;
+    height: 60vh;
+    margin-top: 5vh;
+    margin-left: 15vw;
+}
+.contact > *{
+    margin-top: 3vh;
+    justify-content: space-between;
+}
+.fontPlay {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.noto {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.cactus-classical-serif-regular {
+    font-family: "Cactus Classical Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+svg{
+    height: 4vh;
+    width: 4vw;
+}
+  

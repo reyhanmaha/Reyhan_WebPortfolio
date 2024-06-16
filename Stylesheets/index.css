@@ -1,19 +1,31 @@
 img{
     
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
 }
 body{
     background-color: rgb(22, 121, 171);
-    
 }
 .main{
     background-color: rgb(238, 247, 255);
-    width: 80vw;
+    width: 50vw;
     height: 60vh;
     border-radius: 20%;
-    margin-top: 20vh;
+    /*margin-top: 7vh;*/
+    margin-top: 10vh;
     
+}
+.headImage img{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 80vw;
+    height: 80vh;
+    border-style: groove;
+    border-radius: 5%;
+}
+.header{
+    margin-top: 5vh;
 }
 h1{
     font-family: "Playfair Display", serif;
@@ -32,14 +44,22 @@ h2{
 }
 .btn{
     background-color: rgb(122, 178, 178);
-    margin-top: 6%;
-    width: 50vw;
+    margin-top: 7%;
+    width: 40vw;
     height: 20vh;
     font-size:50px;
 }
-svg{
+.header svg{
     height: 5vh;
     width: 5vw;
+}
+.main a{
+    margin-left: 7vw;
+}
+button svg{
+    width: 15vw;
+    height: 15vh;
+    margin-left: 1vw;
 }
 #rightArrow{
     height: 15vh;

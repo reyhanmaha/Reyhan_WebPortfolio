@@ -1,0 +1,47 @@
+img{
+    
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    background-color: rgb(22, 121, 171);
+    
+}
+.main{
+    background-color: rgb(238, 247, 255);
+    width: 80vw;
+    height: 60vh;
+    border-radius: 20%;
+    margin-top: 20vh;
+    
+}
+h1{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h2{
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.item{
+    
+}
+.btn{
+    background-color: rgb(122, 178, 178);
+    margin-top: 6%;
+    width: 50vw;
+    height: 20vh;
+    font-size:50px;
+}
+svg{
+    height: 5vh;
+    width: 5vw;
+}
+#rightArrow{
+    height: 15vh;
+    width: 15vw;
+}

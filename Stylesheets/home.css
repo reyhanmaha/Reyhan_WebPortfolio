@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(22, 121, 171);
+}
+.carousel-item img{
+    height: 80vh;
+    width: 100vh;
+    
+}
+.carousel-item svg{
+    height:"20vh" ;
+    width:"20vw";
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 15%;
+}
+.carousel-inner{
+    align-content: center;
+}

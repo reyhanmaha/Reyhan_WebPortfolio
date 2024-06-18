@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(22, 121, 171);
+}
+.resumePage{
+    background-color: white;
+    border-style: groove;
+    border-radius: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 20vw;
+    height: 175vh;
+    width: 60vw;
+}
+.contactInfo{
+    margin-top: 3vh;
+    text-align: center;
+}
+.line2{
+    margin-top: 5%;
+    margin-left: 5vw;
+}
+.line3{
+    margin-top: 5%;
+    margin-left: 5vw;
+}
+.line4{
+    margin-top: 5%;
+    margin-left: 5vw;
+}
+.line5{
+    margin-top: 5%;
+    margin-left: 5vw;
+}

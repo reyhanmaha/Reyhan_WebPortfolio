@@ -7,12 +7,34 @@ body{
     
 }
 .carousel-item svg{
-    height:"20vh" ;
-    width:"20vw";
+    height:40vh ;
+    width:40vw;
     align-items: center;
-    margin-left: 40%;
-    margin-top: 15%;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+#carouselExampleAutoplaying h2{
+    margin-top: 5vh;
+    text-align: center;
+}
+#carouselExampleAutoplaying h3{
+    margin-top: 1vh;
+    text-align: center;
+}
+#carouselExampleAutoplaying a{
+    color: rgb(23, 74, 140);
 }
 .carousel-inner{
     align-content: center;
+}
+.viewing{
+    height: 80vh;
+    width: 100vw;
+}
+.foot{
+    background-color: white;
+    padding-top: 5vh;
+    height: 20vh;
+    width: 100vw;
+    text-align: center;
 }

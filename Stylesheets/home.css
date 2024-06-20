@@ -1,36 +1,65 @@
 body{
     background-color: rgb(22, 121, 171);
 }
+.viewing{
+    height: 110vh;
+    width: 100vw;
+}
+.viewing h2{
+    text-decoration: underline;
+    text-align: left;
+    margin-left: 5vw;
+    font-family: "Playfair Display", serif;
+}
 .carousel-item img{
     height: 80vh;
-    width: 100vh;
-    
+    width: 70vh;
 }
+
 .carousel-item svg{
-    height:40vh ;
-    width:40vw;
+    height:15vh ;
+    width:15vw;
     align-items: center;
-    margin-left: 30%;
+    /*margin-left: 30%;*/
     margin-top: 5%;
 }
-#carouselExampleAutoplaying h2{
+.card{
+    justify-content: center;
+    text-align: center;
+    height: 40vh;
+}
+/*
+.carousel-inner{
+    margin-left: 40%;
+    margin-top: 10px;
+    align-content: center;
+}*/
+.carousel-item{
+    height: 40vh;
+    margin-left: 40%;
+    margin-top: 10px;
+    align-items: center;
+}
+#carousel-completed{
+    margin-top: 2vh;
+    height: 45vh;
+    border: 10px;
+}
+#carousel-completed h2{
     margin-top: 5vh;
     text-align: center;
 }
-#carouselExampleAutoplaying h3{
+#carousel-completed h3{
     margin-top: 1vh;
     text-align: center;
 }
-#carouselExampleAutoplaying a{
+#carousel-completed a{
     color: rgb(23, 74, 140);
 }
-.carousel-inner{
-    align-content: center;
+#carousel-inProgress{
+    height: 55vh;
 }
-.viewing{
-    height: 80vh;
-    width: 100vw;
-}
+
 .foot{
     background-color: white;
     padding-top: 5vh;

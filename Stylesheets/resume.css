@@ -6,10 +6,10 @@ body{
     border-style: groove;
     border-radius: 5%;
     border-color: white;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-bottom: 4%;
     margin-left: 20vw;
-    height: 255vh;
+    height: 190vh;
     width: 60vw;
 }
 .contactInfo{

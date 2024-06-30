@@ -1,5 +1,7 @@
 body{
-    background-color: rgb(22, 121, 171);
+    /*background-color: rgb(22, 121, 171);*/
+    background-color: rgb(255, 255, 255);
+    height: 150vh;
 }
 .viewing{
     height: 110vh;
@@ -10,6 +12,17 @@ body{
     text-align: left;
     margin-left: 5vw;
     font-family: "Playfair Display", serif;
+    background-color:  rgb(22, 121, 171);
+    text-align: center;
+    margin-top: 2vh;
+    margin-left: 10vw;
+    height: 5vh;
+    width:80vw;
+}
+.viewing button{
+    margin-top: 3vh;
+    height: 5vh;
+    width: 10vw;
 }
 .carousel-item img{
     height: 80vh;
@@ -24,6 +37,7 @@ body{
     margin-top: 5%;
 }
 .card{
+    background-color: rgb(54, 150, 234);
     justify-content: center;
     text-align: center;
     height: 40vh;
@@ -35,6 +49,7 @@ body{
     align-content: center;
 }*/
 .carousel-item{
+    
     height: 40vh;
     margin-left: 40%;
     margin-top: 10px;
@@ -54,16 +69,15 @@ body{
     text-align: center;
 }
 #carousel-completed a{
-    color: rgb(23, 74, 140);
+    color:  rgb(22, 121, 171);
 }
 #carousel-inProgress{
     height: 55vh;
 }
-
-.foot{
-    background-color: white;
-    padding-top: 5vh;
-    height: 20vh;
+footer{
+    padding-top: 15vh;
+    color: white;
+    height: 40vh;
     width: 100vw;
     text-align: center;
 }

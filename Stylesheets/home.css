@@ -1,7 +1,7 @@
 body{
     /*background-color: rgb(22, 121, 171);*/
     background-color: rgb(255, 255, 255);
-    height: 150vh;
+    height: 110vh;
 }
 .viewing{
     height: 110vh;
@@ -42,6 +42,9 @@ body{
     text-align: center;
     height: 40vh;
 }
+.card-text{
+    font-size: 20px;
+}
 /*
 .carousel-inner{
     margin-left: 40%;
@@ -75,9 +78,9 @@ body{
     height: 55vh;
 }
 footer{
-    padding-top: 15vh;
+    padding-top: 5vh;
     color: white;
-    height: 40vh;
+    height: 20vh;
     width: 100vw;
     text-align: center;
 }

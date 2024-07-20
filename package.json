@@ -2,6 +2,7 @@
   "name": "reyhan_webportfolio",
   "version": "1.0.0",
   "description": "Contains packages for project",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +10,7 @@
   "author": "reyhan",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.19.2"
   }
 }

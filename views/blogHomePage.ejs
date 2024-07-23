@@ -12,14 +12,28 @@
 
     <div class="container left-align">
         <div class="row">
-          <div class="col-3">
-            <h2>Profile</h2>
-          </div>
-          <div class="col-6">
+            <div class="card col-3 profileSection">
+              <h2>Profile</h2>
+            </div>
+          <div class="card col-6 postsSection">
             <h2>Posts</h2>
+            <% if (locals.posts) { %>
+             
+            <% }else{ %>
+              <div class="card">
+                <p>No posts from this User</p>
+              </div>
+            <% } %>
           </div>
-          <div class="col-3">
+          <div class="card col-3 addPostSection">
             <h2>Add Posts</h2>
+            <div class="mb-3">
+              <label class="form-label">User123</label>
+            </div>
+            <div class="mb-3">
+              <label for="postTextArea" class="form-label">Enter Post</label>
+              <textarea class="form-control" id="postTextArea" rows="3"></textarea>
+            </div>
           </div>
         </div>
       </div>

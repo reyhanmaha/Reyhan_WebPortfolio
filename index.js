@@ -4,6 +4,7 @@ import path from "path";
 
 const port=3000;
 const app=express();
+let data=[];
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
@@ -31,7 +32,24 @@ app.get("/resume",(req,res)=>{
 });
 
 app.get("/blogHomePage",(req,res)=>{
-    res.render("blogHomePage");
+    //let posts=[];
+    res.render("blogHomePage",{posts:data});
+});
+
+app.post("/blogHomePage",(req,res)=>{
+    //let posts=[];
+    data.push(req.body['posts']);
+    //data.push(req.body['posts']);
+    console.log(data);
+
+    /*
+    if(req.body['posts']){
+        data={
+            posts:[req.body['posts']]
+        };
+    }
+        */
+    res.render("blogHomePage",{posts:data});
 });
 
 app.listen(port, () => {

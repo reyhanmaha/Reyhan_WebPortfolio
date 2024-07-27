@@ -14,11 +14,20 @@
         <div class="row">
             <div class="card col-3 profileSection">
               <h2>Profile</h2>
+              <ul>
+                <li>Profile Name: User123</li>
+                <li>Contact No: (868) 232-6689</li>
+                <li>Email: user@gmail.com</li>
+              </ul>
             </div>
           <div class="card col-6 postsSection">
             <h2>Posts</h2>
             <% if (locals.posts) { %>
-             
+              <% posts.forEach(element => { %>
+                <div class="postCard">
+                  <p><%= element %></p>
+                </div>
+                <% }) %>
             <% }else{ %>
               <div class="card">
                 <p>No posts from this User</p>
@@ -31,8 +40,11 @@
               <label class="form-label">User123</label>
             </div>
             <div class="mb-3">
-              <label for="postTextArea" class="form-label">Enter Post</label>
-              <textarea class="form-control" id="postTextArea" rows="3"></textarea>
+              <form action="/blogHomePage" method="post">
+                <label for="postTextArea" class="form-label">Enter Post</label>
+                <input type="text" class="form-control" name="posts" id="postTextArea" rows="3">
+                <input type="submit" value="Send">
+              </form>
             </div>
           </div>
         </div>

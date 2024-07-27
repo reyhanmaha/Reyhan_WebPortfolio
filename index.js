@@ -41,15 +41,30 @@ app.post("/blogHomePage",(req,res)=>{
     data.push(req.body['posts']);
     //data.push(req.body['posts']);
     console.log(data);
-
-    /*
-    if(req.body['posts']){
-        data={
-            posts:[req.body['posts']]
-        };
-    }
-        */
     res.render("blogHomePage",{posts:data});
+});
+
+app.post("/removePost",(req,res)=>{
+    let value=req.body["index"];
+    let position=data.indexOf(value);
+    if(position===0){
+        data.splice(0,1);
+    }else{
+        data.splice(position,1);
+    }
+    res.redirect("blogHomePage");
+});
+
+app.post("/editPost",(req,res)=>{
+    let value=req.body["index"];
+    console.log(value);
+    let position=data.indexOf(value);
+    if(position===0){
+        data.splice(0,1);
+    }else{
+        data.splice(position,1);
+    }
+    res.redirect("blogHomePage");
 });
 
 app.listen(port, () => {

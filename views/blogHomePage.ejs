@@ -26,6 +26,12 @@
               <% posts.forEach(element => { %>
                 <div class="postCard">
                   <p><%= element %></p>
+                  <form action="/removePost" method="post">
+                    <button name="index" value="<%= element %>">Delete</button>
+                  </form>
+                  <form action="/editPost" method="post">
+                    <button name="index" value="<%= element %>">Delete</button>
+                  </form>
                 </div>
                 <% }) %>
             <% }else{ %>

@@ -1,7 +1,7 @@
-img{
+/*img{
     height: 50vh;
-    width: 100vw;
-}
+    width: 30rem;
+}*/
 body{
     background-color: rgb(22, 121, 171);
 }
@@ -11,6 +11,7 @@ body{
     height: 80vh;
     border-radius: 20%;
     border-style: groove;
+    
 }
 .main > *{
     margin-top: 10vh;
@@ -25,13 +26,29 @@ body{
     
 }
 .headImage img{
-    width: 40vw;
+    width: 40rem;
     height: 80vh;
     border-style: groove;
     border-radius: 5%;
+    /*margin-left: 15rem;*/
+    margin-left: 1rem;
 }
+@media (min-width: 900px) and (max-width: 1080px) {
+    .headImage img{
+        width: 40rem;
+        height: 80vh;
+        border-style: groove;
+        border-radius: 5%;
+        margin-left: 15rem;
+        
+    }
+}
+    
+
 .container{
     margin-top: 10vh;
+    margin-left: 5rem;
+
 }
 h1{
     font-family: "Playfair Display", serif;

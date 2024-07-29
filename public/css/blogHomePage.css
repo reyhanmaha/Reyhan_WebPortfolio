@@ -1,3 +1,30 @@
 body{
     background-color: rgb(255, 248, 243);
 }
+h1{
+    text-align: center;
+}
+.contentTable{
+    
+}
+.profileSection{
+    
+}
+.postsSection{
+    
+    
+}
+.addPostSection{
+   
+}
+.postsSection postCard{
+    border: 5rem;
+    border-style: double;
+    border-color: rgb(4, 232, 160);
+}
+.postsSection button{
+    margin-left: 89%;
+}
+.postsSection hr{
+    
+}

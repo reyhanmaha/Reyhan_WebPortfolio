@@ -77,6 +77,9 @@ body{
 #carousel-inProgress{
     height: 55vh;
 }
+button .carousel-control{
+    background-color: black;
+}
 footer{
     padding-top: 5vh;
     color: white;

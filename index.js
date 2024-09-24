@@ -78,6 +78,10 @@ app.post("/editPost",(req,res)=>{
     res.redirect("blogHomePage");
 });
 
+app.get("/cocktailHomepage",(req,res)=>{
+    res.render("cocktailHomepage");
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });

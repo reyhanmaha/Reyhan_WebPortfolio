@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import path from "path";
+import axios from "axios";
 import pg from "pg";
 
 const db = new pg.Client({
@@ -78,7 +79,40 @@ app.post("/editPost",(req,res)=>{
     res.redirect("blogHomePage");
 });
 
-app.get("/cocktailHomepage",(req,res)=>{
+app.get("/cocktailHomepage",async (req,res)=>{
+    const options = {
+    method: 'GET',
+    url: 'https://the-cocktail-db3.p.rapidapi.com/',
+    headers: {
+        'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+        'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+    }
+    };
+
+    try {
+        const response = await axios.request(options);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+    res.render("cocktailHomepage");
+});
+
+app.get("/randomCocktail",async (req,res)=>{
+    const options = {
+    method: 'GET',
+    url: 'https://the-cocktail-db3.p.rapidapi.com/45',
+    headers: {
+        'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+        'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+    }
+    };
+    try {
+        const response = await axios.request(options);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
     res.render("cocktailHomepage");
 });
 

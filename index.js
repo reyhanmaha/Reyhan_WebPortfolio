@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import path from "path";
 import axios from "axios";
 import pg from "pg";
+import { info } from "console";
 
 const db = new pg.Client({
   user: "postgres",
@@ -91,11 +92,11 @@ app.get("/cocktailHomepage",async (req,res)=>{
 
     try {
         const response = await axios.request(options);
-        console.log(response.data);
+        res.render("cocktailHomepage",{drinks:response.data});
     } catch (error) {
+        console.log("Error");
         console.error(error);
     }
-    res.render("cocktailHomepage");
 });
 
 app.get("/randomCocktail",async (req,res)=>{

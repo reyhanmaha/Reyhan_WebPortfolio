@@ -8,45 +8,51 @@
     <link href="/css/cocktailHomepage.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"">
         <div class="container-fluid">
           <a class="navbar-brand">Cocktails Hub</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./cocktailHomepage">All Drinks</a>
+            </li>
+          </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </nav>
+      
     <div class="container text-center">
-        <div class="row">
-          <div class="ad col">
-            Column
+      <div class="row">
+          <div class="btn-group-sm mx difficultyBtns" role="group" aria-label="Small button group">
+            <p>Difficulty</p>
+            <button type="button" class="btn btn-primary">Easy Drinks</button>
+            <button type="button" class="btn btn-primary">Hard Drinks</button>
           </div>
-          <div class="drinks col-8">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col">
-                        <% if (locals.drinks) { %>
-                            <% for( let index = 0; index < drinks.length; index++ ) { %>
-                                <div class="card">
-                                    <img src=<%= drinks[index].image %> class="card-img-top" alt="Picture Unavailable">
-                                    <div class="card-body">
-                                        <p class="card-text"><%=drinks[index].title %></p>
-                                    </div>
-                                </div>
-                            <% } %>
-                        <% } %>
-                    </div>
+          <div class="ad col">
+            Ad Unavailable
+          </div>
+          <div class=" col-8">            
+            <div class="container drinks">
+              <div class="row">
+                  <% if (locals.drinks) { %>
+                    <% for( let index = 0; index < drinks.length; index++ ) { %>
+                      <div class="card m-3">
+                        <img src=<%= drinks[index].image %> class="card-img-top" alt="Picture Unavailable">
+                        <div class="card-body">
+                          <p class="card-text"><%=drinks[index].title %></p>
+                        </div>
+                      </div>          
+                      <% } %>
+                      <% } %>
                 </div>
             </div>
           </div>
           <div class="ad col">
-            Column
+            Ad Unavailable
           </div>
         </div>
     </div>
-    
-    
-    
 </body>
 </html>

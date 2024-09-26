@@ -14,7 +14,38 @@ const db = new pg.Client({
 });
 
 db.connect();
-
+const drinksData=[
+    {
+        id:1,
+        title:"Espresso Martini",
+        difficulty:"easy"
+    },
+    {
+        id:2,
+        title:"Negroni",
+        difficulty:"hard"
+    },
+    {
+        id:3,
+        title:"Daiquiri",
+        difficulty:"hard"
+    },
+    {
+        id:4,
+        title:"Margarita",
+        difficulty:"easy"
+    },
+    {
+        id:5,
+        title:"Whiskey Sour",
+        difficulty:"easy"
+    },
+    {
+        id:6,
+        title:"Aperol Spritz",
+        difficulty:"easy"
+    }
+];
 const port=3000;
 const app=express();
 let data=[];
@@ -81,18 +112,18 @@ app.post("/editPost",(req,res)=>{
 });
 
 app.get("/cocktailHomepage",async (req,res)=>{
-    const options = {
-    method: 'GET',
-    url: 'https://the-cocktail-db3.p.rapidapi.com/',
-    headers: {
-        'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
-        'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
-    }
-    };
-
+    /*const options = {
+        method: 'GET',
+        url: 'https://the-cocktail-db3.p.rapidapi.com/',
+        headers: {
+          'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+    'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+        }
+      };
+      */
     try {
-        const response = await axios.request(options);
-        res.render("cocktailHomepage",{drinks:response.data});
+        //const response = await axios.request(options);
+        res.render("cocktailHomepage",{drinks:drinksData});
     } catch (error) {
         console.log("Error");
         console.error(error);
@@ -100,14 +131,7 @@ app.get("/cocktailHomepage",async (req,res)=>{
 });
 
 app.get("/randomCocktail",async (req,res)=>{
-    const options = {
-    method: 'GET',
-    url: 'https://the-cocktail-db3.p.rapidapi.com/45',
-    headers: {
-        'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
-        'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
-    }
-    };
+    
     try {
         const response = await axios.request(options);
         console.log(response.data);

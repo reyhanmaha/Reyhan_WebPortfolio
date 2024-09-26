@@ -2,13 +2,20 @@ body{
     background-color: aliceblue;
 }
 nav{
-    background-color: #3681ea;
+    
 }
 .ad{
     background-color: #8b9bb2;
 }
-.drinks img{
-    justify-content: center;
+.cocktailList{
+
+}
+.drinks{
+    margin-left: 6rem;
+    text-align: center;
+}
+.difficultyBtns{
+    
 }
 .card{
     width: 12rem;

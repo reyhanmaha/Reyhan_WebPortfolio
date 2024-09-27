@@ -6,13 +6,27 @@ nav{
 }
 .ad{
     background-color: #8b9bb2;
+    text-align: center;
 }
 .cocktailList{
 
 }
+.sortSec input{
+    
+}
 .drinks{
-    margin-left: 6rem;
+    margin-left: 5rem;
     text-align: center;
+}
+.card{
+    width: 18rem;
+}
+.drinks img{
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
 }
 .difficultyBtns{
     

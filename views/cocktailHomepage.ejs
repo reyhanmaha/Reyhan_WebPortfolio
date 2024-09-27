@@ -24,12 +24,21 @@
       </nav>
       
     <div class="container text-center">
-      <div class="row">
-          <div class="btn-group-sm mx difficultyBtns" role="group" aria-label="Small button group">
-            <p>Difficulty</p>
-            <button type="button" class="btn btn-primary">Easy Drinks</button>
-            <button type="button" class="btn btn-primary">Hard Drinks</button>
+      <div class="form-check sortSec"></div>
+          <form action="/cocktailHomepage" method="post">
+            <input class="form-check-input pt-2" type="radio" value="easy" name="easyDrinks" id="easyBtn">
+            <label class="form-check-label" for="easyBtn">
+              Easy Drinks
+            </label>
+            <input class="form-check-input pt-2" type="radio" value="hard" name="hardDrinks" id="hardBtn">
+            <label class="form-check-label" for="hardBtn">
+              Hard Drinks
+            </label>
+            <button type="submit" class="btn btn-outline-primary">Sort</button>
+          </form>
           </div>
+      <div class="row">
+        
           <div class="ad col">
             Ad Unavailable
           </div>
@@ -41,6 +50,7 @@
                       <div class="card m-3">
                         <img src=<%= drinks[index].image %> class="card-img-top" alt="Picture Unavailable">
                         <div class="card-body">
+                          <hr>
                           <p class="card-text"><%=drinks[index].title %></p>
                         </div>
                       </div>          

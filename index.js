@@ -18,32 +18,38 @@ const drinksData=[
     {
         id:1,
         title:"Espresso Martini",
-        difficulty:"easy"
+        difficulty:"easy",
+        image:"https://us.jura.com/-/media/global/images/coffee-recipes/images-redesign-2020/espresso_martini_2000x1400px.jpg?h=1400&iar=0&w=2000&hash=B2F24F41FB83DBD8BA6E5C4A9703A3D7"
     },
     {
         id:2,
         title:"Negroni",
-        difficulty:"hard"
+        difficulty:"hard",
+        image:"https://www.liquor.com/thmb/KPTRXSVO7vyx7O2fPyNkLh9JQPo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mezcal-negroni-1500x1500-primary-6f6c472050a949c8a55aa07e1b5a2d1b.jpg"
     },
     {
         id:3,
         title:"Daiquiri",
-        difficulty:"hard"
+        difficulty:"hard",
+        image:"https://www.wineenthusiast.com/wp-content/uploads/2023/08/08_23_Daquiri_HERO_GettyImages-1489505870_1920x1280-1280x853.jpg"
     },
     {
         id:4,
         title:"Margarita",
-        difficulty:"easy"
+        difficulty:"easy",
+        image:"https://www.liquor.com/thmb/JQgDGy26Zsw-_cFGKH4zNH9PlXk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Frozen-Margarita-1500x1500-hero-191e49b3ab4f4781b93f3cfacac25136.jpg"
     },
     {
         id:5,
         title:"Whiskey Sour",
-        difficulty:"easy"
+        difficulty:"easy",
+        image:"https://assets.epicurious.com/photos/63443ba259142b909ba89726/master/pass/WhiskeySourCocktails_RECIPE_100622_40707.jpg"
     },
     {
         id:6,
         title:"Aperol Spritz",
-        difficulty:"easy"
+        difficulty:"easy",
+        image:"https://static01.nyt.com/images/2023/08/25/multimedia/LH-aperol-spritz-lqbj/LH-aperol-spritz-lqbj-superJumbo.jpg"
     }
 ];
 const port=3000;
@@ -126,6 +132,42 @@ app.get("/cocktailHomepage",async (req,res)=>{
         res.render("cocktailHomepage",{drinks:drinksData});
     } catch (error) {
         console.log("Error");
+        console.error(error);
+    }
+});
+
+app.post("/cocktailHomepage",async (req,res)=>{
+    let easyCocktails=[];
+    let hardCocktails=[];
+     if(req.body['easyDrinks']){
+        for (let index = 0; index < drinksData.length; index++) {
+            if(drinksData[index].difficulty=="easy"){
+                easyCocktails.push(drinksData[index]);
+            }
+        }
+        console.log(easyCocktails);
+        try {
+            res.render("cocktailHomepage",{drinks:easyCocktails});
+        } catch (error) {
+            console.error(error);
+        }
+     }
+     if(req.body['hardDrinks']){
+        for (let index = 0; index < drinksData.length; index++) {
+            if(drinksData[index].difficulty=="hard"){
+                hardCocktails.push(drinksData[index]);
+            }
+        }
+        console.log(hardCocktails);
+        try {
+            res.render("cocktailHomepage",{drinks:hardCocktails});
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    try {
+        res.render("cocktailHomepage",{drinks:drinksData});
+    } catch (error) {
         console.error(error);
     }
 });

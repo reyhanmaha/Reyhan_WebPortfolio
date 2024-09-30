@@ -118,20 +118,23 @@ app.post("/editPost",(req,res)=>{
 });
 
 app.get("/cocktailHomepage",async (req,res)=>{
-    /*const options = {
-        method: 'GET',
-        url: 'https://the-cocktail-db3.p.rapidapi.com/',
-        headers: {
-          'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
-    'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
-        }
-      };
-      */
     try {
-        //const response = await axios.request(options);
+        const options = {
+            method: 'GET',
+            url: 'https://the-cocktail-db3.p.rapidapi.com/',
+            headers: {
+              'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+              'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+            }
+          };  
+            const response = await axios.request(options);
+            res.render("cocktailHomepage",{drinks:drinksData});
+        } catch (error) {
+            console.error(error);
+        }
+    try {
         res.render("cocktailHomepage",{drinks:drinksData});
     } catch (error) {
-        console.log("Error");
         console.error(error);
     }
 });
@@ -145,7 +148,6 @@ app.post("/cocktailHomepage",async (req,res)=>{
                 easyCocktails.push(drinksData[index]);
             }
         }
-        console.log(easyCocktails);
         try {
             res.render("cocktailHomepage",{drinks:easyCocktails});
         } catch (error) {
@@ -158,7 +160,6 @@ app.post("/cocktailHomepage",async (req,res)=>{
                 hardCocktails.push(drinksData[index]);
             }
         }
-        console.log(hardCocktails);
         try {
             res.render("cocktailHomepage",{drinks:hardCocktails});
         } catch (error) {
@@ -173,7 +174,6 @@ app.post("/cocktailHomepage",async (req,res)=>{
 });
 
 app.get("/randomCocktail",async (req,res)=>{
-    
     try {
         const response = await axios.request(options);
         console.log(response.data);
@@ -181,6 +181,28 @@ app.get("/randomCocktail",async (req,res)=>{
         console.error(error);
     }
     res.render("cocktailHomepage");
+});
+
+app.get("/info",async (req,res)=>{
+    
+    res.render("cocktailInfo");
+});
+
+app.post("/searchDrink",async (req,res)=>{
+    try {
+        let searchResults;
+        let value;
+        for (let i = 0; i < drinksData.length; i++) {
+            value=drinksData[i].title.search(req.body['search'])
+            if(value!=-1){
+            console.log("here");
+            searchResults=drinksData[i];
+            res.render("searchDrink",{drinks:searchResults});   
+        }
+    }
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 app.listen(port, () => {

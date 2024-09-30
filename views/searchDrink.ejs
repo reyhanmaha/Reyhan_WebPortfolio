@@ -49,7 +49,7 @@
             <div class="container drinks">
               <div class="row">
                   <% if (locals.drinks) { %>
-                    <% for( let index = 0; index < drinks.length; index++ ) { %>
+                    <% for( let index = 0; index <= drinks.length; index++ ) { %>
                       <div class="card m-3">
                         <img src=<%= drinks[index].image %> class="card-img-top" alt="Picture Unavailable">
                         <div class="card-body">

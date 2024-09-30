@@ -47,11 +47,32 @@ const drinksData=[
         image:"https://assets.epicurious.com/photos/63443ba259142b909ba89726/master/pass/WhiskeySourCocktails_RECIPE_100622_40707.jpg"
     },
     {
-        id:6,
-        title:"Aperol Spritz",
-        difficulty:"easy",
-        image:"https://static01.nyt.com/images/2023/08/25/multimedia/LH-aperol-spritz-lqbj/LH-aperol-spritz-lqbj-superJumbo.jpg"
-    }
+        id: 6,
+        title: "Aperol spritz",
+        difficulty: "easy",
+        portion: "Serves 6-8",
+        time: "Hands-on time 5 min",
+        description: "Get into the spirit of summer with this classic Italian recipe. Chilled prosecco and Aperol come together to create the beloved Aperol spritz.",
+        ingredients: [
+          "750ml bottle of prosecco",
+          "Bag of ice",
+          "Bottle of Aperol",
+          "Bottle of soda water",
+          "Slice of orange"
+        ],
+        method: [
+          {
+            "Step 1": "Chill the bottle of prosecco and Aperol in the fridge."
+          },
+          {
+            "Step 2": "Fill 6 or 8 wine glasses or tall tumblers with a couple of ice cubes and roughly three parts prosecco to one part Aperol."
+          },
+          {
+            "Step 3": "Add a splash of soda water and a slice of orange. Serve straightaway so that the fizz stays lively."
+          }
+        ],
+        image: "https://static01.nyt.com/images/2023/08/25/multimedia/LH-aperol-spritz-lqbj/LH-aperol-spritz-lqbj-superJumbo.jpg"
+      }
 ];
 const port=3000;
 const app=express();
@@ -185,19 +206,27 @@ app.get("/randomCocktail",async (req,res)=>{
 });
 
 app.get("/info",async (req,res)=>{
-    
     res.render("cocktailInfo");
+});
+
+app.get("/drinkDetails",async (req,res)=>{
+    console.log(req); 
+    res.render("cocktailDetails");
 });
 
 app.post("/searchDrink",async (req,res)=>{
     try {
-        let searchResults;
+        let searchResults=[];
         let value;
+        let itemTitle;
+        let searchedTitle;
+        searchedTitle=req.body['search'];
         for (let i = 0; i < drinksData.length; i++) {
-            value=drinksData[i].title.search(req.body['search'])
+            itemTitle=drinksData[i].title.toLowerCase();
+            value=itemTitle.search(searchedTitle.toLowerCase())
             if(value!=-1){
-            console.log("here");
-            searchResults=drinksData[i];
+                searchResults.push(drinksData[i]);
+                console.log(searchResults);
             res.render("searchDrink",{drinks:searchResults});   
         }
     }

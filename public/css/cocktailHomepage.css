@@ -36,3 +36,7 @@ nav{
 .card{
     width: 12rem;
 }
+svg{
+    margin-right: 1rem;
+    background-color:gray;
+}

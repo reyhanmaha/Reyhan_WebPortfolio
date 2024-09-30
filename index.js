@@ -4,7 +4,7 @@ import path from "path";
 import axios from "axios";
 import pg from "pg";
 import { info } from "console";
-
+/*
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
@@ -14,6 +14,7 @@ const db = new pg.Client({
 });
 
 db.connect();
+*/
 const drinksData=[
     {
         id:1,

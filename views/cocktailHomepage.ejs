@@ -62,7 +62,9 @@
                   <% if (locals.drinks) { %>
                     <% for( let index = 0; index < drinks.length; index++ ) { %>
                       <div class="card m-3">
-                        <a href="/drinkDetails" ><img src=<%= drinks[index].image %> name="drink" value=<%= drinks[index].title %> class="card-img-top" alt="Picture Unavailable"></a>
+                        <form action="/drinkDetails" method="post">
+                          <button type="submit" name="drink" value=<%= drinks[index].id %>><img src=<%= drinks[index].image %>  class="card-img-top" alt="Picture Unavailable"></button>
+                        </form>
                         <div class="card-body">
                           <hr>
                           <p class="card-text"><%=drinks[index].title %></p>

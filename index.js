@@ -62,13 +62,13 @@ const drinksData=[
         ],
         method: [
           {
-            "Step 1": "Chill the bottle of prosecco and Aperol in the fridge."
+            Step: "Chill the bottle of prosecco and Aperol in the fridge."
           },
           {
-            "Step 2": "Fill 6 or 8 wine glasses or tall tumblers with a couple of ice cubes and roughly three parts prosecco to one part Aperol."
+            Step: "Fill 6 or 8 wine glasses or tall tumblers with a couple of ice cubes and roughly three parts prosecco to one part Aperol."
           },
           {
-            "Step 3": "Add a splash of soda water and a slice of orange. Serve straightaway so that the fizz stays lively."
+            Step: "Add a splash of soda water and a slice of orange. Serve straightaway so that the fizz stays lively."
           }
         ],
         image: "https://static01.nyt.com/images/2023/08/25/multimedia/LH-aperol-spritz-lqbj/LH-aperol-spritz-lqbj-superJumbo.jpg"
@@ -209,9 +209,17 @@ app.get("/info",async (req,res)=>{
     res.render("cocktailInfo");
 });
 
-app.get("/drinkDetails",async (req,res)=>{
-    console.log(req); 
-    res.render("cocktailDetails");
+app.post("/drinkDetails",async (req,res)=>{
+    console.log(req.body['drink']);
+    let item;
+    for (let x = 0; x < drinksData.length; x++) {
+        if(drinksData[x].id==req.body['drink']){
+            item=drinksData[x];
+            res.render("cocktailDetails",{drink:item});
+        }
+        
+    } 
+    
 });
 
 app.post("/searchDrink",async (req,res)=>{

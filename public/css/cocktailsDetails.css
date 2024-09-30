@@ -1,0 +1,51 @@
+body{
+    background-color: aliceblue;
+}
+nav{
+    
+}
+.ad{
+    background-color: #8b9bb2;
+    text-align: center;
+}
+.cocktailList{
+
+}
+.sortSec input{
+    border: 1rem;
+    border-style: groove;
+    border-color: aqua;
+}
+.drinks{
+    margin-left: 5rem;
+    text-align: center;
+}
+.card{
+    width: 18rem;
+}
+.drinks img{
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+}
+.detailsImg img{
+    height: 25rem;
+    width: 20rem;
+    margin-left: 0.5rem;
+}
+.detailsText{
+    text-align: left;
+}
+.detailsLower{
+    text-align: left;
+    margin-left: 3rem;
+}
+.card{
+    width: 12rem;
+}
+svg{
+    margin-right: 1rem;
+    background-color:gray;
+}

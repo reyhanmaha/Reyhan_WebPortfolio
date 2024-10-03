@@ -212,13 +212,20 @@ app.get("/info",async (req,res)=>{
 app.post("/drinkDetails",async (req,res)=>{
     console.log(req.body['drink']);
     let item;
+    let badSearch=false;
     for (let x = 0; x < drinksData.length; x++) {
-        if(drinksData[x].id==req.body['drink']){
+        if(drinksData[x].id==req.body['drink']  && drinksData[x].ingredients!=null){
             item=drinksData[x];
             res.render("cocktailDetails",{drink:item});
+        }else{
+            badSearch=true;
         }
         
     } 
+    if(badSearch){
+        console.log("hereeeee");
+        res.render("cocktailHomepage",{drinks:drinksData,detailsError:true});    
+    }
     
 });
 
@@ -237,6 +244,8 @@ app.post("/searchDrink",async (req,res)=>{
                 console.log(searchResults);
             res.render("searchDrink",{drinks:searchResults});   
         }
+            
+        
     }
     } catch (error) {
         console.log(error);

@@ -9,6 +9,7 @@ body{
     border: 1rem;
     border-style: groove;
     border-color: aqua;
+    
 }
 .drinks{
     margin-left: 2rem;
@@ -27,9 +28,12 @@ body{
     outline: none;
     background-color: white;
     margin-right: 2rem;
+    
 }
 .card{
     width: 13rem;
+    /*box-shadow: 10px 10px grey;*/
+    box-shadow: 20px 20px 50px rgb(98, 109, 116);
 }
 .card form{
     
@@ -39,9 +43,9 @@ body{
     transition: 0.5s ease-in-out;
 }
 .card::after{
-    content: "";
+    
     position: absolute;
-    inset: 0;
+    inset: 10px;
     border: 2px solid black;
     border-radius: inherit;
     opacity: 0;
@@ -49,8 +53,9 @@ body{
 }
 .card:hover img{
     filter:
-        grayscale(1)
-        brightness(0.4)
+        contrast(200%)
+        /*drop-shadow(8px 8px 10px #76c4ebfd);*/
+        /*brightness(0.4)*/
 }
 .card:hover::after{
     opacity: 1;

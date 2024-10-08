@@ -1,15 +1,9 @@
 body{
     background-color: aliceblue;
 }
-nav{
-    
-}
 .ad{
     background-color: #8b9bb2;
     text-align: center;
-}
-.cocktailList{
-
 }
 .sortSec input{
     border: 1rem;
@@ -17,11 +11,8 @@ nav{
     border-color: aqua;
 }
 .drinks{
-    margin-left: 5rem;
+    margin-left: 2rem;
     text-align: center;
-}
-.card{
-    width: 18rem;
 }
 .drinks img{
     align-items: center;
@@ -29,19 +20,48 @@ nav{
     width: 10rem;
     padding-top: 1rem;
     padding-left: 0.5rem;
+    
 }
 .drinks button{
     border: none;
     outline: none;
     background-color: white;
-    margin-right: 1rem;
-}
-.difficultyBtns{
-    
+    margin-right: 2rem;
 }
 .card{
-    width: 12rem;
+    width: 13rem;
 }
+.card form{
+    
+}
+.card img{
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid black;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.card:hover img{
+    filter:
+        grayscale(1)
+        brightness(0.4)
+}
+.card:hover::after{
+    opacity: 1;
+    inset: 10px;
+}
+.card:hover .card-body p{
+    scale: 1;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 svg{
     margin-right: 1rem;
     background-color:gray;

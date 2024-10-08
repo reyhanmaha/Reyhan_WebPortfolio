@@ -5,11 +5,12 @@ nav{
     
 }
 .ad{
+    /*background-color: #8b9bb2;*/
     background-color: #8b9bb2;
     text-align: center;
 }
-.infoPage{
-    
+.infoText{
+    background-color: #F5F7F8;
 }
 .sortSec input{
     border: 1rem;

@@ -19,37 +19,37 @@ const drinksData=[
     {
         id:1,
         title:"Espresso Martini",
-        difficulty:"easy",
+        difficulty:"Easy",
         image:"https://us.jura.com/-/media/global/images/coffee-recipes/images-redesign-2020/espresso_martini_2000x1400px.jpg?h=1400&iar=0&w=2000&hash=B2F24F41FB83DBD8BA6E5C4A9703A3D7"
     },
     {
         id:2,
         title:"Negroni",
-        difficulty:"hard",
+        difficulty:"Hard",
         image:"https://www.liquor.com/thmb/KPTRXSVO7vyx7O2fPyNkLh9JQPo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mezcal-negroni-1500x1500-primary-6f6c472050a949c8a55aa07e1b5a2d1b.jpg"
     },
     {
         id:3,
         title:"Daiquiri",
-        difficulty:"hard",
+        difficulty:"Hard",
         image:"https://www.wineenthusiast.com/wp-content/uploads/2023/08/08_23_Daquiri_HERO_GettyImages-1489505870_1920x1280-1280x853.jpg"
     },
     {
         id:4,
         title:"Margarita",
-        difficulty:"easy",
+        difficulty:"Easy",
         image:"https://www.liquor.com/thmb/JQgDGy26Zsw-_cFGKH4zNH9PlXk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Frozen-Margarita-1500x1500-hero-191e49b3ab4f4781b93f3cfacac25136.jpg"
     },
     {
         id:5,
         title:"Whiskey Sour",
-        difficulty:"easy",
+        difficulty:"Easy",
         image:"https://assets.epicurious.com/photos/63443ba259142b909ba89726/master/pass/WhiskeySourCocktails_RECIPE_100622_40707.jpg"
     },
     {
         id: 6,
         title: "Aperol spritz",
-        difficulty: "easy",
+        difficulty: "Easy",
         portion: "Serves 6-8",
         time: "Hands-on time 5 min",
         description: "Get into the spirit of summer with this classic Italian recipe. Chilled prosecco and Aperol come together to create the beloved Aperol spritz.",
@@ -150,7 +150,7 @@ app.get("/cocktailHomepage",async (req,res)=>{
             }
           };  
             const response = await axios.request(options);
-            res.render("cocktailHomepage",{drinks:drinksData});
+            res.render("cocktailHomepage",{drinks:response});
         } catch (error) {
             console.error(error);
         }
@@ -164,9 +164,50 @@ app.get("/cocktailHomepage",async (req,res)=>{
 app.post("/cocktailHomepage",async (req,res)=>{
     let easyCocktails=[];
     let hardCocktails=[];
+    let response;
+    try {
+        const options = {
+            method: 'GET',
+            url: 'https://the-cocktail-db3.p.rapidapi.com/',
+            headers: {
+              'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+              'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+            }
+          };  
+            response = await axios.request(options);
+            if(response){
+                const info=response.data;
+                if(req.body['easyDrinks']){
+                    for (let index = 0; index < info.length; index++) {
+                        if(info[index].difficulty=="Easy"){
+                            easyCocktails.push(drinksData[index]);
+                        }
+                    }
+                    try {
+                        res.render("cocktailHomepage",{drinks:easyCocktails});
+                    } catch (error) {
+                        console.error(error);
+                    }
+                }
+                if(req.body['hardDrinks']){
+                    for (let index = 0; index < info.length; index++) {
+                        if(info[index].difficulty=="Hard"){
+                            hardCocktails.push(drinksData[index]);
+                        }
+                    }
+                    try {
+                        res.render("cocktailHomepage",{drinks:hardCocktails});
+                    } catch (error) {
+                        console.error(error);
+                    }
+                }
+            }
+        } catch (error) {
+            console.error(error);
+        }
      if(req.body['easyDrinks']){
         for (let index = 0; index < drinksData.length; index++) {
-            if(drinksData[index].difficulty=="easy"){
+            if(drinksData[index].difficulty=="Easy"){
                 easyCocktails.push(drinksData[index]);
             }
         }
@@ -178,7 +219,7 @@ app.post("/cocktailHomepage",async (req,res)=>{
      }
      if(req.body['hardDrinks']){
         for (let index = 0; index < drinksData.length; index++) {
-            if(drinksData[index].difficulty=="hard"){
+            if(drinksData[index].difficulty=="Hard"){
                 hardCocktails.push(drinksData[index]);
             }
         }
@@ -188,6 +229,7 @@ app.post("/cocktailHomepage",async (req,res)=>{
             console.error(error);
         }
     }
+
     try {
         res.render("cocktailHomepage",{drinks:drinksData});
     } catch (error) {
@@ -220,10 +262,8 @@ app.post("/drinkDetails",async (req,res)=>{
         }else{
             badSearch=true;
         }
-        
     } 
     if(badSearch){
-        console.log("hereeeee");
         res.render("cocktailHomepage",{drinks:drinksData,detailsError:true});    
     }
     
@@ -241,11 +281,8 @@ app.post("/searchDrink",async (req,res)=>{
             value=itemTitle.search(searchedTitle.toLowerCase())
             if(value!=-1){
                 searchResults.push(drinksData[i]);
-                console.log(searchResults);
             res.render("searchDrink",{drinks:searchResults});   
         }
-            
-        
     }
     } catch (error) {
         console.log(error);

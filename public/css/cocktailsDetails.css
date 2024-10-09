@@ -35,6 +35,11 @@ nav{
     width: 20rem;
     margin-left: 0.5rem;
 }
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 .detailsText{
     text-align: left;
 }

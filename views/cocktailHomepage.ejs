@@ -51,9 +51,9 @@
             <label class="form-check-label" for="easyBtn">
               Easy Drinks
             </label>
-            <input class="form-check-input pt-2" type="radio" value="hard" name="hardDrinks" id="hardBtn">
-            <label class="form-check-label" for="hardBtn">
-              Hard Drinks
+            <input class="form-check-input pt-2" type="radio" value="hard" name="mediumDrinks" id="mediumBtn">
+            <label class="form-check-label" for="mediumBtn">
+              Medium Drinks
             </label>
             <button type="submit" class="btn btn-outline-primary">Sort</button>
           </form>
@@ -75,9 +75,12 @@
                         <div class="card-body">
                           <hr>
                           <p class="card-text pt-sans-regular"><%=drinks[index].title %></p>
-                          <% if (drinks[index].method==null) { %>
-                            <p>Information Unavailable</p>
-                          <% } %>
+                          <!--
+                            <% if (drinks[index].method==null) { %>
+                              <p>Information Unavailable</p>
+                              <% } %>
+                          -->
+                        
                         </div>
                       </div>          
                       <% } %>

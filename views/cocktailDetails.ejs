@@ -78,7 +78,8 @@
                           <h4>Method:</h4>
                           <ol>
                             <% for( let x = 0; x < drink.method.length; x++ ) { %>
-                              <li><%= drink.method[x].Step %></li>
+                              <% let Step=Object.values(drink.method[x]) %>
+                              <li><%= Step %></li>
                               <% } %>
                             </ol>
                           </div>

@@ -25,13 +25,13 @@ const drinksData=[
     {
         id:2,
         title:"Negroni",
-        difficulty:"Hard",
+        difficulty:"Medium",
         image:"https://www.liquor.com/thmb/KPTRXSVO7vyx7O2fPyNkLh9JQPo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mezcal-negroni-1500x1500-primary-6f6c472050a949c8a55aa07e1b5a2d1b.jpg"
     },
     {
         id:3,
         title:"Daiquiri",
-        difficulty:"Hard",
+        difficulty:"Medium",
         image:"https://www.wineenthusiast.com/wp-content/uploads/2023/08/08_23_Daquiri_HERO_GettyImages-1489505870_1920x1280-1280x853.jpg"
     },
     {
@@ -150,7 +150,8 @@ app.get("/cocktailHomepage",async (req,res)=>{
             }
           };  
             const response = await axios.request(options);
-            res.render("cocktailHomepage",{drinks:response});
+            //console.log(response.data);
+            res.render("cocktailHomepage",{drinks:response.data});
         } catch (error) {
             console.error(error);
         }
@@ -162,79 +163,85 @@ app.get("/cocktailHomepage",async (req,res)=>{
 });
 
 app.post("/cocktailHomepage",async (req,res)=>{
-    let easyCocktails=[];
-    let hardCocktails=[];
+    let easyCocktails = [];
+    let mediumCocktails = [];
     let response;
     try {
         const options = {
             method: 'GET',
             url: 'https://the-cocktail-db3.p.rapidapi.com/',
             headers: {
-              'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
-              'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+                'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+                'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
             }
-          };  
-            response = await axios.request(options);
-            if(response){
-                const info=response.data;
-                if(req.body['easyDrinks']){
-                    for (let index = 0; index < info.length; index++) {
-                        if(info[index].difficulty=="Easy"){
-                            easyCocktails.push(drinksData[index]);
-                        }
-                    }
-                    try {
-                        res.render("cocktailHomepage",{drinks:easyCocktails});
-                    } catch (error) {
-                        console.error(error);
+        };
+        response = await axios.request(options);
+        if (response) {
+            console.log("HERE");
+            const info = response.data;
+            if (req.body['easyDrinks']) {
+                let item;
+                for (let index = 0; index < info.length; index++) {
+                    item = info[index];
+                    if (item.difficulty === "Easy") {
+                        easyCocktails.push(item);
                     }
                 }
-                if(req.body['hardDrinks']){
-                    for (let index = 0; index < info.length; index++) {
-                        if(info[index].difficulty=="Hard"){
-                            hardCocktails.push(drinksData[index]);
-                        }
-                    }
-                    try {
-                        res.render("cocktailHomepage",{drinks:hardCocktails});
-                    } catch (error) {
-                        console.error(error);
-                    }
+                try {
+                    //console.log(easyCocktails)
+                    res.render("cocktailHomepage", { drinks: easyCocktails });
+                } catch (error) {
+                    console.error(error);
                 }
             }
-        } catch (error) {
-            console.error(error);
+            if (req.body['mediumDrinks']) {
+                let mediumItem;
+                for (let index = 0; index < info.length; index++) {
+                    mediumItem = info[index];
+                    if (mediumItem.difficulty === "Medium") {
+                        mediumCocktails.push(mediumItem);
+                    }
+                }
+                try {
+                    res.render("cocktailHomepage", { drinks: mediumCocktails });
+                } catch (error) {
+                    console.error(error);
+                }
+            }
         }
-     if(req.body['easyDrinks']){
+    } catch (error) {
+        console.error(error);
+    }
+    if (req.body['easyDrinks']) {
         for (let index = 0; index < drinksData.length; index++) {
-            if(drinksData[index].difficulty=="Easy"){
+            if (drinksData[index].difficulty == "Easy") {
                 easyCocktails.push(drinksData[index]);
             }
         }
         try {
-            res.render("cocktailHomepage",{drinks:easyCocktails});
+            res.render("cocktailHomepage", { drinks: easyCocktails });
         } catch (error) {
             console.error(error);
         }
-     }
-     if(req.body['hardDrinks']){
+    }
+    if (req.body['mediumDrinks']) {
         for (let index = 0; index < drinksData.length; index++) {
-            if(drinksData[index].difficulty=="Hard"){
-                hardCocktails.push(drinksData[index]);
+            if (drinksData[index].difficulty == "Medium") {
+                mediumCocktails.push(drinksData[index]);
             }
         }
         try {
-            res.render("cocktailHomepage",{drinks:hardCocktails});
+            res.render("cocktailHomepage", { drinks: mediumCocktails });
         } catch (error) {
             console.error(error);
         }
     }
 
-    try {
-        res.render("cocktailHomepage",{drinks:drinksData});
+    /*try {
+        res.render("cocktailHomepage", { drinks: drinksData });
     } catch (error) {
         console.error(error);
-    }
+    }*/
 });
 
 app.get("/randomCocktail",async (req,res)=>{
@@ -255,6 +262,29 @@ app.post("/drinkDetails",async (req,res)=>{
     console.log(req.body['drink']);
     let item;
     let badSearch=false;
+    try {
+        var drinkID=req.body['drink'];
+        const options = {
+        method: 'GET',
+        url: 'https://the-cocktail-db3.p.rapidapi.com/',
+        headers: {
+            'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+            'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+        }
+        };
+        options.url=options.url.concat("",drinkID);
+
+        try {
+            const response = await axios.request(options);
+            console.log(response.data);
+            res.render("cocktailDetails",{drink:response.data});
+        } catch (error) {
+            console.error(error);
+        }
+    } catch (error) {
+        
+    }
+    /*
     for (let x = 0; x < drinksData.length; x++) {
         if(drinksData[x].id==req.body['drink']  && drinksData[x].ingredients!=null){
             item=drinksData[x];
@@ -262,7 +292,8 @@ app.post("/drinkDetails",async (req,res)=>{
         }else{
             badSearch=true;
         }
-    } 
+    }*/
+
     if(badSearch){
         res.render("cocktailHomepage",{drinks:drinksData,detailsError:true});    
     }
@@ -276,14 +307,41 @@ app.post("/searchDrink",async (req,res)=>{
         let itemTitle;
         let searchedTitle;
         searchedTitle=req.body['search'];
+        try {
+            const options = {
+                method: 'GET',
+                url: 'https://the-cocktail-db3.p.rapidapi.com/',
+                headers: {
+                  'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
+                  'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
+                }
+              };
+              
+              try {
+                  let response = await axios.request(options);
+                  response=response.data;
+                  for (let i = 0; i < response.length; i++) {
+                    itemTitle=response[i].title.toLowerCase();
+                    value=itemTitle.search(searchedTitle.toLowerCase())
+                    if(value!=-1){
+                        searchResults.push(response[i]);
+                    }
+                }
+                 res.render("searchDrink",{drinks:searchResults});
+              } catch (error) {
+                  console.error(error);
+              }
+        } catch (error) {
+            
+        }
         for (let i = 0; i < drinksData.length; i++) {
             itemTitle=drinksData[i].title.toLowerCase();
             value=itemTitle.search(searchedTitle.toLowerCase())
             if(value!=-1){
                 searchResults.push(drinksData[i]);
-            res.render("searchDrink",{drinks:searchResults});   
+            }
         }
-    }
+        res.render("searchDrink",{drinks:searchResults});   
     } catch (error) {
         console.log(error);
     }

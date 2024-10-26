@@ -47,6 +47,9 @@ nav{
     text-align: left;
     margin-left: 3rem;
 }
+.detailsLower ol{
+    width: 50rem;
+}
 .card{
     width: 12rem;
 }

@@ -85,6 +85,21 @@ button.carousel-control{
     margin-left: 4rem;
     
 }
+.navbar-brand{
+    background: linear-gradient(90deg,#21c707,#e61461,#00c6ff);
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
+    animation: text-animation 2s infinite;
+}
+@keyframes text-animation{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 200%;
+    }
+}
 footer{
     padding-top: 5vh;
     color: white;

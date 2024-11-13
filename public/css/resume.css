@@ -9,7 +9,7 @@ body{
     margin-top: 2%;
     margin-bottom: 4%;
     margin-left: 20vw;
-    height: 115rem;
+    height: 110rem;
     width: 60vw;
 }
 .contactInfo{
@@ -28,7 +28,17 @@ body{
     margin-top: 5%;
     margin-left: 5vw;
 }
-.line5{
-    margin-top: 5%;
-    margin-left: 5vw;
+.traits{
+    margin-right: 4rem;
+}
+.extraSkills{
+    margin-top: 2rem;
+}
+.awards{
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.special{
+    text-decoration: underline;
+    font-weight: bold;
 }

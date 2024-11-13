@@ -1,7 +1,8 @@
 body{
     /*background-color: rgb(22, 121, 171);*/
     /*background-color: rgb(255, 255, 255);*/
-    background-color: #F4F6FF;
+    /*background-color: #F4F6FF;*/
+    background-image: radial-gradient(circle, #F4F6FF,rgb(188, 189, 210));
     height: 110vh;
 }
 .viewing{
@@ -17,6 +18,7 @@ body{
     text-align: center;
     margin-top: 2vh;
     margin-left: 10vw;
+    border-radius: 5rem;
     height: 5vh;
     width:80vw;
 }
@@ -86,7 +88,8 @@ button.carousel-control{
     
 }
 .navbar-brand{
-    background: linear-gradient(90deg,#21c707,#e61461,#00c6ff);
+    font-family: "Playfair Display", serif;
+    background: linear-gradient(90deg,#21c707,#00c6ff);
     background-size: 200%;
     background-clip: text;
     color: transparent;

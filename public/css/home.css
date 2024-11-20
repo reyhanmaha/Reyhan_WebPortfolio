@@ -2,7 +2,8 @@ body{
     /*background-color: rgb(22, 121, 171);*/
     /*background-color: rgb(255, 255, 255);*/
     /*background-color: #F4F6FF;*/
-    background-image: radial-gradient(circle, #F4F6FF,rgb(188, 189, 210));
+    /*background-image: radial-gradient(circle, #F4F6FF,rgb(188, 189, 210));*/
+    background-image: radial-gradient(circle, #F4F6FF,#F5F5F5);
     height: 110vh;
 }
 .viewing{
@@ -14,7 +15,9 @@ body{
     text-align: left;
     margin-left: 5vw;
     font-family: "Playfair Display", serif;
-    background-color:  rgb(79, 172, 218);
+    /*background-color:  rgb(79, 172, 218);
+    background-image: linear-gradient(to bottom left,#FBF8EF,#C9E6F0, #006A67);*/
+    background-image: linear-gradient(to right, rgba(127, 143, 166,0.0), rgba(130, 204, 221,1.0));
     text-align: center;
     margin-top: 2vh;
     margin-left: 10vw;
@@ -27,9 +30,43 @@ body{
     height: 5vh;
     width: 10vw;
 }
+
+.viewing .viewBtn{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(
+        -60deg,
+        #ffffff00 0%,
+        #ffffff00 40%,
+        #ffffff44 40%,
+        #ffffff44 60%,
+        #ffffff00 60%,
+        #ffffff00 100%,
+    );
+    background-size: 200% 100%;
+    background-position-x: 150%;
+    transition:  0.5s;
+}
+.viewBtn:hover{
+    animation: shimmer 3s forwards;
+    scale: 1.1;
+}
+@keyframes shimmer{
+    0%{
+        background-position-x: 200%;
+        background-image: linear-gradient(to right, #00CCDD , #F27BBD);
+    }
+    100%{
+        background-position-x: -50%;
+    }
+}
 .carousel-item img{
     height: 80vh;
     width: 70vh;
+}
+.carousel-item a{
+    margin-top: 3rem;
 }
 
 .carousel-item svg{
@@ -40,11 +77,12 @@ body{
     margin-top: 5%;
 }
 .card{
-    background-color: rgb(54, 150, 234);
+    /*background-color: #EAD8B1;*/
+    background-image: radial-gradient(circle,rgba(72, 126, 176,0.0) , rgba(53, 59, 72,1.0));
     justify-content: center;
     text-align: center;
     height: 40vh;
-    box-shadow: 10px 10px grey;
+    box-shadow: 10px 10px rgba(130, 204, 221,1.0);
 }
 .card-text{
     font-size: 20px;

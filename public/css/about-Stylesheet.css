@@ -75,4 +75,19 @@ svg{
     height: 4vh;
     width: 4vw;
 }
-  
+.navbar-brand{
+    font-family: "Playfair Display", serif;
+    background: linear-gradient(90deg,#21c707,#00c6ff);
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
+    animation: text-animation 2s infinite;
+}
+@keyframes text-animation{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 200%;
+    }
+} 

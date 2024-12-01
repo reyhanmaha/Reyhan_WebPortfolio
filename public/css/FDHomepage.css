@@ -1,0 +1,22 @@
+body{
+    background-color: #E4E0E1;
+}
+.navbar{
+    height: 5rem;
+    /*background-color: #D6C0B3;*/
+    background-color: #FBF8EF;
+    
+}
+.content{
+    margin-top: 3rem;
+}
+.navbar-brand img{
+    width: 4rem;
+    height: 4rem;
+}
+.navbar-brand a{
+    font-size:x-large;
+}
+.navbar li{
+   
+}

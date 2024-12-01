@@ -337,6 +337,10 @@ app.post("/searchDrink",async (req,res)=>{
     }
 });
 
+app.get("/FineDiningHomepage",(req,res)=>{
+    res.render("FinerDiningHomepage");
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });

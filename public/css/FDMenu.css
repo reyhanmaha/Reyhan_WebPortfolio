@@ -7,26 +7,6 @@ body{
     background-color: #FBF8EF;
     
 }
-.content{
-    
-}
-.subContent{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.subContent img{
-    height: 20rem;
-    width: 40rem;
-    border-radius: 2rem;
-}
-.subContent .card{
-    height: 20rem;
-    
-}
-#homePageFood img{
-    height: 60rem;
-}
 .navbar-brand img{
     width: 4rem;
     height: 4rem;
@@ -34,11 +14,21 @@ body{
 .navbar-brand a{
     font-size:x-large;
 }
+.menuBtns{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.menuBtns img{
+    height: 15rem;
+    width: 15rem;
+}
+.menuBtns button{
+    border-color: black;
+    height: 20rem;
+    width: 20rem;
+}
 footer{
     height: 10rem;
     background-color: #FBF8EF;
     text-align: center;
-}
-footer h3{
-    
 }

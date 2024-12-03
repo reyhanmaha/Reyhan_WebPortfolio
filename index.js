@@ -341,6 +341,14 @@ app.get("/FineDiningHomepage",(req,res)=>{
     res.render("FinerDiningHomepage");
 });
 
+app.get("/FineDiningMenu",(req,res)=>{
+    res.render("menu");
+});
+
+app.get("/FineDiningAboutUs",(req,res)=>{
+    res.render("FinerDiningAboutUs");
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });

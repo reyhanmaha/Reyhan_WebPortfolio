@@ -7,26 +7,6 @@ body{
     background-color: #FBF8EF;
     
 }
-.content{
-    
-}
-.subContent{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.subContent img{
-    height: 20rem;
-    width: 40rem;
-    border-radius: 2rem;
-}
-.subContent .card{
-    height: 20rem;
-    
-}
-#homePageFood img{
-    height: 60rem;
-}
 .navbar-brand img{
     width: 4rem;
     height: 4rem;
@@ -34,11 +14,13 @@ body{
 .navbar-brand a{
     font-size:x-large;
 }
+.AboutUsContent img{
+    height: 20rem;
+    width: 30rem;
+    float:left;
+}
 footer{
     height: 10rem;
     background-color: #FBF8EF;
     text-align: center;
-}
-footer h3{
-    
 }

@@ -8,95 +8,103 @@
     <title>Finer Dining</title>
 </head>
 <body>
-    <!--
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand">
-                    <img src="/images/food.svg">
-                    Finer Dining</a>
-                    <div class="collapse navbar" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/FineDiningHomepage">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Menu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Careers</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            -->
             <div class="navbar">
-                <a class="navbar-brand">
-                    <img src="/images/food.svg">
-                    Finer Dining</a>
-                    <h2 id="logo">Where Dining, Becomes Finer!</h2>
-                <ul class="nav nav-tabs nav-fill">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/FineDiningHomepage">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Careers</a>
-                    </li>
-                </ul>
+              <a class="navbar-brand">
+                <img src="/images/food.svg">
+                Finer Dining</a>
+              <h2 id="logo">Where Dining, Becomes Finer!</h2>
+              <ul class="nav nav-tabs nav-fill">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/FineDiningHomepage">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/FineDiningMenu">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/FineDiningAboutUs">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Careers</a>
+                </li>
+              </ul>
             </div>
-    <div class="content">
-        <div class="content-imgs">
-            <div id="homePageFood" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#homePageFood" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#homePageFood" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#homePageFood" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="content">
+              <div class="content-imgs">
+                <div id="homePageFood" class="carousel slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#homePageFood" data-bs-slide-to="0" class="active" aria-current="true"
+                      aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#homePageFood" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#homePageFood" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://www.allrecipes.com/thmb/QiGptPjQB5mqSXGVxE4sLPMJs_4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg"
+                        class="d-block w-100" alt="Alfredo Pasta">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Alfredo Pasta</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://static.independent.co.uk/2024/04/25/16/iStock-1414575281.jpg" class="d-block w-100"
+                        alt="Margarita Pizza">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Margarita Pizza</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://static.wixstatic.com/media/c5916c_decfe8802dbf402fbbd27295612acecd~mv2.jpg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c5916c_decfe8802dbf402fbbd27295612acecd~mv2.jpg"
+                        class="d-block w-100" alt="Tiramisu">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Bruschetta</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#homePageFood" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#homePageFood" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://www.allrecipes.com/thmb/QiGptPjQB5mqSXGVxE4sLPMJs_4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg" class="d-block w-100" alt="Alfredo Pasta">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Alfredo Pasta</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+              </div>
+              <div class="subContent container text-center">
+                <div class="row">
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Our Locations</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">-----</h6>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quibusdam incidunt, labore in numquam amet harum animi, molestiae veritatis voluptas ut maxime blanditiis minima error fuga impedit quam. Earum, neque!</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <img src="https://static.independent.co.uk/2024/04/25/16/iStock-1414575281.jpg" class="d-block w-100" alt="Margarita Pizza">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Margarita Pizza</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Opening Hours</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Monday-Saturday</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, similique. Magnam eligendi ab, nisi pariatur quasi incidunt ullam asperiores optio! Sit repellat ea modi voluptatem aspernatur quia distinctio laudantium rerum?</p>
+                        
+                      </div>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <img src="https://bluristorante.com/wp-content/uploads/2019/03/10-Best-Italian-Desserts-to-Enjoy-After-Your-Meal-1080x700.jpg" class="d-block w-100" alt="Tiramisu">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Tiramisu</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
+                  <div class="col">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXvuOQAP1D765sDEwYc_rBGwSsYzvHioaeQ&s">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#homePageFood" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#homePageFood" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>    
-        </div>
-    </div>
-    <footer>
+              </div>
+            </div>
+    <footer class="pt-4">
         <h3>Thanks For Visiting our Webpage!</h3>
+        <p>Follow Us On Our Socials!</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

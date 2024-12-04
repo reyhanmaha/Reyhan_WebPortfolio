@@ -1,0 +1,34 @@
+body{
+    background-color: #E4E0E1;
+}
+.navbar{
+    height: 5rem;
+    /*background-color: #D6C0B3;*/
+    background-color: #FBF8EF;
+    
+}
+.navbar-brand img{
+    width: 4rem;
+    height: 4rem;
+}
+.navbar-brand a{
+    font-size:x-large;
+}
+.menuBtns{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.menuBtns img{
+    height: 15rem;
+    width: 15rem;
+}
+.menuBtns button{
+    border-color: black;
+    height: 20rem;
+    width: 20rem;
+}
+footer{
+    height: 10rem;
+    background-color: #FBF8EF;
+    text-align: center;
+}

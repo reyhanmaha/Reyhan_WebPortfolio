@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import path from "path";
 import axios from "axios";
 import pg from "pg";
+import csvParser from "csv-parser";
+import fs from "fs";
 import { info } from "console";
 /*
 const db = new pg.Client({
@@ -347,6 +349,27 @@ app.get("/FineDiningMenu",(req,res)=>{
 
 app.get("/FineDiningAboutUs",(req,res)=>{
     res.render("FinerDiningAboutUs");
+});
+
+app.post("/FineDiningOptions",(req,res)=>{
+    let drinkData=[];
+    if(req.body['drink']){
+        fs.createReadStream('./public/dataFiles/finerDiningDrinksData.csv') // Path to your CSV file
+        .pipe(csvParser())
+        .on('data', (row) => {
+            drinkData.push(row);
+            //console.log(row); // Process each row
+    })
+        .on('end', () => {
+        console.log('CSV file successfully processed.');
+    });
+        
+        console.log(drinkData);
+    }
+    if(req.body['food']){
+        console.log("desserts");
+    }
+    res.render("menuOptions");
 });
 
 app.listen(port, () => {

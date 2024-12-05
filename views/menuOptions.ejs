@@ -29,7 +29,31 @@
         </ul>
       </div>
       <div class="container-fluid text-center menuBtns">
-        
+        <div class="row">
+          <div class="col">
+            <h2>Non-Alcoholic Deinks</h2>
+            <img src="https://marketingedge.com.ng/wp-content/uploads/2024/04/ColdDrinks.jpg" alt="Non-Alcoholic Deinks">
+             <ul>
+                <% for( let index = 0; index < data.length; index++ ) { %>
+                  <% if (data[index].Alcoholic=="False") { %>
+                   <li><%= data[index].Name %></li>
+                  <% } %>
+                <% } %>
+              </ul>
+          </div>
+          <div class="col">
+            <h2>Alcoholic Deinks</h2>
+            <img src="https://www.arkbh.com/wp-content/uploads/2021/09/types_of_alcohol-768x432.jpg.webp" alt="Alcoholic Deinks">
+             <ul>
+                <% for( let index = 0; index < data.length; index++ ) { %>
+                  <% if (data[index].Alcoholic=="True") { %>
+                   <li><%= data[index].Name %></li>
+                  <% } %>
+                <% } %>
+              </ul>
+          </div>
+        </div>
+       
       </div>
       <footer class="pt-4">
         <h3>Thanks For Visiting our Webpage!</h3>

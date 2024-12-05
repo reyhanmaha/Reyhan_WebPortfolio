@@ -1,4 +1,7 @@
-Non-Alcoholic,Alcoholic
-Orange Juice,Red Wine
-Water,Whiskey
-Soda,Beer
+Name,Alcoholic
+Orange Juice,False
+Water,False
+Red Wine,True
+Whiskey,True
+Soda,False
+Beer,True

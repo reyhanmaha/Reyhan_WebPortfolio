@@ -357,19 +357,21 @@ app.post("/FineDiningOptions",(req,res)=>{
         fs.createReadStream('./public/dataFiles/finerDiningDrinksData.csv') // Path to your CSV file
         .pipe(csvParser())
         .on('data', (row) => {
-            drinkData.push(row);
+            let item=row;
             //console.log(row); // Process each row
-    })
+            drinkData.push(row);
+        })
         .on('end', () => {
-        console.log('CSV file successfully processed.');
+            console.log('CSV file successfully processed.');
+            console.log(drinkData);
+            res.render("menuOptions",{data:drinkData});
     });
         
-        console.log(drinkData);
     }
     if(req.body['food']){
         console.log("desserts");
     }
-    res.render("menuOptions");
+    //res.render("menuOptions");
 });
 
 app.listen(port, () => {

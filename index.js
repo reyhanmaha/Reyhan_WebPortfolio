@@ -364,7 +364,7 @@ app.post("/FineDiningOptions",(req,res)=>{
         .on('end', () => {
             console.log('CSV file successfully processed.');
             console.log(drinkData);
-            res.render("menuOptions",{data:drinkData});
+            res.render("menuOptions",{data:drinkData,type:"drink"});
     });
         
     }
@@ -380,9 +380,25 @@ app.post("/FineDiningOptions",(req,res)=>{
         .on('end', () => {
             console.log('CSV file successfully processed.');
             console.log(foodData);
-            res.render("menuOptions",{data:foodData});
+            res.render("menuOptions",{data:foodData,type:"food"});
     });
     }
+    if(req.body['sweets']){
+        let foodData=[];
+        fs.createReadStream('./public/dataFiles/finerDiningFoodData.csv') // Path to your CSV file
+        .pipe(csvParser())
+        .on('data', (row) => {
+            
+            //console.log(row); // Process each row
+            foodData.push(row);
+        })
+        .on('end', () => {
+            console.log('CSV file successfully processed.');
+            console.log(foodData);
+            res.render("menuOptions",{data:foodData,type:"dessert"});
+    });
+    }
+
     //res.render("menuOptions");
 });
 

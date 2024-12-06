@@ -369,7 +369,19 @@ app.post("/FineDiningOptions",(req,res)=>{
         
     }
     if(req.body['food']){
-        console.log("desserts");
+        let foodData=[];
+        fs.createReadStream('./public/dataFiles/finerDiningFoodData.csv') // Path to your CSV file
+        .pipe(csvParser())
+        .on('data', (row) => {
+            
+            //console.log(row); // Process each row
+            foodData.push(row);
+        })
+        .on('end', () => {
+            console.log('CSV file successfully processed.');
+            console.log(foodData);
+            res.render("menuOptions",{data:foodData});
+    });
     }
     //res.render("menuOptions");
 });

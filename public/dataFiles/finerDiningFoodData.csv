@@ -1,0 +1,9 @@
+Name,Appetizer,Soup,Entree,Dessert
+French Onion Soup,False,True,False,False
+Soup of the Day,False,True,False,False
+Bruschetta,True,False,False,False
+Alfredo Pasta,False,False,True,False
+Pepperoni Pizza,False,False,True,False
+Tiramisu,False,False,False,True
+Affogato,False,False,False,True
+Garlic Bread,True,False,False,False

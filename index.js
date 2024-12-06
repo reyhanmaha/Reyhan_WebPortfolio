@@ -402,6 +402,23 @@ app.post("/FineDiningOptions",(req,res)=>{
     //res.render("menuOptions");
 });
 
+app.get("/FineDiningCareers",(req,res)=>{
+    let jobsData=[];
+    fs.createReadStream('./public/dataFiles/finerDiningCareers.csv') // Path to your CSV file
+        .pipe(csvParser())
+        .on('data', (row) => {
+            
+            //console.log(row); // Process each row
+            jobsData.push(row);
+        })
+        .on('end', () => {
+            console.log('CSV file successfully processed.');
+            //console.log(foodData);
+            res.render("FinerDiningCareers",{data:jobsData});
+    });
+   
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });

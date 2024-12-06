@@ -29,7 +29,22 @@
               </ul>
             </div>
             <div class="careersContent">
-
+                <% if (locals.data) { %>
+                    <div class="row">
+                        <div class="col">
+                            <h2>Available Job Positions</h2>
+                            <ul>
+                                <% for( let index = 0; index < data.length; index++ ) { %>
+                                    <li>
+                                        <%= data[index].Position_Title %>
+                                    </li>
+                                
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                 
+                <% } %>
             </div>
             
     <footer class="pt-4">

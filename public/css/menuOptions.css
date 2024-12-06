@@ -14,19 +14,15 @@ body{
 .navbar-brand a{
     font-size:x-large;
 }
-.menuBtns{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+img{
+    height: 30rem;
+    width: 30rem;
 }
-.menuBtns img{
-    height: 15rem;
-    width: 15rem;
+ul{
+    line-height: 2rem;
+    list-style-type:none;
 }
-.menuBtns button{
-    border-color: black;
-    height: 20rem;
-    width: 20rem;
-}
+
 footer{
     height: 10rem;
     background-color: #FBF8EF;

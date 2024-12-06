@@ -1,9 +1,9 @@
-Name,Appetizer,Soup,Entree,Dessert
-French Onion Soup,False,True,False,False
-Soup of the Day,False,True,False,False
-Bruschetta,True,False,False,False
-Alfredo Pasta,False,False,True,False
-Pepperoni Pizza,False,False,True,False
-Tiramisu,False,False,False,True
-Affogato,False,False,False,True
-Garlic Bread,True,False,False,False
+Name,Appetizer,Soup,Entree,Dessert,Price
+French Onion Soup,False,True,False,False,40.00
+Soup of the Day,False,True,False,False,30.00
+Bruschetta,True,False,False,False,30.00
+Alfredo Pasta,False,False,True,False,70.00
+Pepperoni Pizza,False,False,True,False,75.00
+Tiramisu,False,False,False,True,35.00
+Affogato,False,False,False,True,30.00
+Garlic Bread,True,False,False,False,20.00

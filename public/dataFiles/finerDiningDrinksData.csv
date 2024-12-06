@@ -1,7 +1,7 @@
-Name,Alcoholic
-Orange Juice,False
-Water,False
-Red Wine,True
-Whiskey,True
-Soda,False
-Beer,True
+Name,Alcoholic,Price
+Orange Juice,False,5.00
+Water,False,4.00
+Red Wine,True,50.00
+Whiskey,True,35.00
+Soda,False,7.00
+Beer,True,8.00

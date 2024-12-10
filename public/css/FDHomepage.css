@@ -10,6 +10,11 @@ body{
 .content{
     
 }
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 .subContent{
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -31,8 +36,9 @@ body{
     width: 4rem;
     height: 4rem;
 }
-.navbar-brand a{
-    font-size:x-large;
+.navbar-brand {
+    font-size:2rem;
+    margin-left: 2rem;
 }
 footer{
     height: 10rem;

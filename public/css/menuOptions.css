@@ -7,16 +7,77 @@ body{
     background-color: #FBF8EF;
     
 }
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 .navbar-brand img{
     width: 4rem;
     height: 4rem;
 }
-.navbar-brand a{
-    font-size:x-large;
+.navbar-brand {
+    font-size:2rem;
+    margin-left: 2rem;
+}
+.Section{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.Section h2{
+    margin-left: 5rem;
+    
+}
+.appCol{
+    display: inline-flexbox;
+}
+.foodTable{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse ;
+}
+.foodTable td{
+    padding: 10px;
+    border-bottom: 1px solid #090808;
+}
+.drinksTable{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.drinksTable td{
+    padding: 10px;
+}
+.tableSection{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.delius-regular {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.italianno-regular {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+  }
+.menu h2{
+    
+}
+.foodItem{
+    margin-top: 1rem;
+}
+.foodPrice{
+    margin-right: 2rem;
 }
 img{
     height: 30rem;
     width: 30rem;
+    border-radius: 2rem;
 }
 ul{
     line-height: 2rem;

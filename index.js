@@ -419,6 +419,11 @@ app.get("/FineDiningCareers",(req,res)=>{
    
 });
 
+app.post("/FineDiningCareers",(req,res)=>{
+    console.log(req.body['fName']);
+   res.redirect("/FineDiningHomepage")
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });

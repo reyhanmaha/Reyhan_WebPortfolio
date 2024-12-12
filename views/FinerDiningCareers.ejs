@@ -1,66 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/FDHomepage.css">
-    <title>Finer Dining</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/FDCareers.css">
+  <title>Finer Dining</title>
 </head>
+
 <body>
-            <div class="navbar">
-              <a class="navbar-brand great-vibes-regular">
-                <img src="/images/food.svg">
-                Finer Dining</a>
-              <h2 id="logo" class="great-vibes-regular">Where Dining, Becomes Finer!</h2>
-              <ul class="nav nav-tabs nav-fill">
-                <li class="nav-item">
-                  <a class="nav-link" href="/FineDiningHomepage">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/FineDiningMenu">Menu</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/FineDiningAboutUs">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/FineDiningCareers">Careers</a>
-                </li>
-              </ul>
+  <div class="navbar">
+    <a class="navbar-brand great-vibes-regular">
+      <img src="/images/food.svg">
+      Finer Dining</a>
+    <h2 id="logo" class="great-vibes-regular">Where Dining, Becomes Finer!</h2>
+    <ul class="nav nav-tabs nav-fill">
+      <li class="nav-item">
+        <a class="nav-link" href="/FineDiningHomepage">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FineDiningMenu">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FineDiningAboutUs">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/FineDiningCareers">Careers</a>
+      </li>
+    </ul>
+  </div>
+  <% if (locals.data) { %>
+    <div class="container careersContent">
+      <div class="row">
+        <div class="col careersArea">
+          <h2 class="roboto-regular">Available Job Positions</h2>
+          <ul>
+            <% for( let index=0; index < data.length; index++ ) { %>
+              <li>
+                <%= data[index].Position_Title %>
+              </li>
+
+              <% } %>
+          </ul>
+        </div>
+        <div class="col">
+          <img
+            src="https://www.thebalancemoney.com/thmb/sIUIMHm_ykGS2ZhYD0p_jea3VAw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/business-owner-with-her-staff-working-at-a-restaurant-1152658696-8d7922e2cb9a414193c80bad343bbc95.jpg"
+            alt="Careers image">
+        </div>
+      </div>
+    
+      <hr>
+      <div class="card careerForm">
+        <h2 class="ms-3 roboto-regular">Finer Dining Job Application Form</h2>
+        <div class="card-body">
+          <form action="/FineDiningCareers" method="post">
+            <div class="row mb-3 form-floating">
+              <div class="col">
+                <label for="fName">First Name</label>
+                <input type="text" aria-label="First name" name="fName" id="fName" placeholder="First Name"
+                class="form-control">
+              </div>
+              <div class="col">
+                <label for="lName">Last Name</label>
+                <input type="text" aria-label="Last name" id="lName" placeholder="Last Name" class="form-control">
+              </div>
             </div>
-            <div class="careersContent">
-                <% if (locals.data) { %>
-                    <div class="row">
-                        <div class="col">
-                            <h2>Available Job Positions</h2>
-                            <ul>
-                                <% for( let index = 0; index < data.length; index++ ) { %>
-                                    <li>
-                                        <%= data[index].Position_Title %>
-                                    </li>
-                                
-                                <% } %>
-                            </ul>
-                        </div>
-                    </div>
-                 
-                <% } %>
-                <% if (!locals.data) { %>
-                 <div class="row">
-                    <div class="col">
-                      <h2>No Available Jobs At This Time</h2>
-                    </div>
-                  </div>
-                <% } %>
-                  
-                
-                 
+            <div class="row mb-3 form-floating mb-3">
+              <div class="col">
+                <label for="floatingInput">Email address</label>
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              </div>
+              <div class="col">
+                <label for="floatingInput">(868)Phone Number</label>
+                <input type="tel" class="form-control" id="floatingInput" placeholder="Phone Number">
+              </div>
             </div>
-            
+            <div class="row">
+              <label>What is your current employment status</label><br>
+              <div class="col">
+                <input class="form-check-input" type="radio" name="employmentBtn" id="employedBtn">
+                <label class="form-check-label" for="employedBtn">Employed</label>
+                <input class="form-check-input" type="radio" name="employmentBtn" id="selfEmployedBtn">
+                <label class="form-check-label" for="selfEmployedBtn">Self-Employed</label>
+                <input class="form-check-input" type="radio" name="employmentBtn" id="studentBtn">
+                <label class="form-check-label" for="studentBtn">Student</label>
+                <input class="form-check-input" type="radio" name="employmentBtn" id="unemployedBtn">
+                <label class="form-check-label" for="unemployedBtn">Unemployed</label>
+              </div>
+            </div>
+            <p class="mt-3">What Position are you interested in?</p>
+            <% for( let index=0; index < data.length; index++ ) { %>
+              <input class="form-check-input" type="radio" name="position"
+              value="<%= locals.data[index].Position_Title %>" id="<%= locals.data[index].Position_Title %>Btn">
+              <label class="form-check-label" for="<%= locals.data[index].Position_Title %>Btn">
+                <%= locals.data[index].Position_Title %>
+              </label><br>
+              <% } %>
+              <div class="row ms-1 my-3 input-group my-3">
+                <label class="input-group-text" for="inputGroupFile01">Upload Resume</label>
+                <input type="file" class="form-control" placeholder="Resume" id="inputGroupFile01">
+              </div>
+              <button type="submit" class="btn btn-outline-primary">Submit Form</button>
+            </form>
+          </div>
+      </div>
+      <% } %>
+        <% if (!locals.data) { %>
+          <div class="row">
+            <div class="col">
+              <h2>No Available Jobs At This Time</h2>
+            </div>
+          </div>
+          <% } %>
+</div>
+
+    
+
     <footer class="pt-4">
-        <h3>Thanks For Visiting our Webpage!</h3>
-        <p>Follow Us On Our Socials!</p>
+      <h3>Thanks For Visiting our Webpage!</h3>
+      <p>Follow Us On Our Socials!</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,0 +1,77 @@
+body{
+    background-color: #E4E0E1;
+}
+.navbar{
+    height: 5rem;
+    /*background-color: #D6C0B3;*/
+    background-color: #FBF8EF;
+    
+}
+.careersContent{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.careersContent ul{
+    text-align: left;
+    line-height: 2rem;
+    list-style:circle;
+}
+.careersContent img{
+    border-radius: 2rem;
+    height: 40rem;
+    width: 40rem;
+}
+.careerForm{
+    text-align: left;
+    display: block;
+    background-color: #FFF0DC;
+    
+}
+.careersArea{
+    background-color: #FFF0DC;
+    border-radius: 2rem;
+}
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.subContent{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.subContent img{
+    height: 20rem;
+    width: 40rem;
+    border-radius: 2rem;
+}
+.subContent .card{
+    height: 20rem;
+    
+}
+#homePageFood img{
+    height: 60rem;
+}
+.navbar-brand img{
+    width: 4rem;
+    height: 4rem;
+}
+.navbar-brand {
+    font-size:2rem;
+    margin-left: 2rem;
+}
+footer{
+    height: 10rem;
+    background-color: #FBF8EF;
+    text-align: center;
+}
+footer h3{
+    
+}

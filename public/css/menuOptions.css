@@ -71,6 +71,10 @@ body{
 .foodItem{
     margin-top: 1rem;
 }
+.homeBtn{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
 .foodPrice{
     margin-right: 2rem;
 }

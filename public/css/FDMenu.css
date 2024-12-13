@@ -15,6 +15,10 @@ body{
     font-size:2rem;
     margin-left: 2rem;
 }
+.homeBtn{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
 .great-vibes-regular {
     font-family: "Great Vibes", cursive;
     font-weight: 400;

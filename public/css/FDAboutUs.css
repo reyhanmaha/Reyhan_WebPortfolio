@@ -20,6 +20,10 @@ body{
     font-weight: 400;
     font-style: normal;
   }
+  .homeBtn{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
 .AboutUsContent img{
     height: 20rem;
     width: 30rem;

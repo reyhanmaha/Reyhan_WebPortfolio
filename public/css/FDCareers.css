@@ -28,6 +28,10 @@ body{
     background-color: #FFF0DC;
     
 }
+.homeBtn{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
 .careersArea{
     background-color: #FFF0DC;
     border-radius: 2rem;

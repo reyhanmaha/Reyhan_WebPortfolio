@@ -183,7 +183,8 @@ footer{
     body{
         flex-direction: column;
         width: 26rem;
-        height: 175rem;
+        height: 170rem;
+        /*height: 100%;*/
         
     }
     .sec1{
@@ -210,7 +211,8 @@ footer{
         height: 14rem;
         margin-top: 1rem;
         margin-left: 1rem;
-        
+        flex-wrap: wrap;
+        overflow-wrap: normal;
     }
     .viewing.container{
         flex-direction: column;
@@ -253,8 +255,7 @@ footer{
     }
     footer{
         width:100%;
-        margin: 0;
-        padding: 0;
+       
         box-sizing: border-box;
     }
 }

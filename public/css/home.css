@@ -21,7 +21,7 @@ body{
 .sec1{
     display: inline-flex;
     background-color: #F5F5F5;
-    height: 29.65rem;
+    height: 30rem;
 }
 .sec1 img{
     float: right;
@@ -179,6 +179,19 @@ footer{
     width: 100%;
     text-align: center;
 }
+
+@media (min-width: 1440px){
+    .sec1{
+        text-align: center;
+        
+        
+    }
+    #headshotIMG{
+        margin: 0;   
+       
+        float: none;
+    }
+}
 @media only screen and (max-width: 480px) {
     body{
         flex-direction: column;
@@ -211,8 +224,7 @@ footer{
         height: 14rem;
         margin-top: 1rem;
         margin-left: 1rem;
-        flex-wrap: wrap;
-        overflow-wrap: normal;
+        
     }
     .viewing.container{
         flex-direction: column;

@@ -182,7 +182,7 @@ footer{
 @media only screen and (max-width: 480px) {
     body{
         flex-direction: column;
-        width: 22rem;
+        width: 26rem;
         height: 175rem;
         
     }
@@ -192,7 +192,7 @@ footer{
         height: 35rem;
     }
     .navbar{
-        width: 25rem;
+        width: 100%;
     }
     #laptopNav{
         width: 2rem;
@@ -242,13 +242,16 @@ footer{
     }
     #imageBar{
         height: 8rem;
-        width:25rem;
+        width:100%;
     }
     #imageBar img{
         width: 3rem;
         height: 3rem;
     }
-    .foot.bg-dark{
-        width:25rem;
+    footer{
+        width:100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 }

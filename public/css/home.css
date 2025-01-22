@@ -243,6 +243,7 @@ footer{
     #imageBar{
         height: 8rem;
         width:100%;
+        margin-top: 3rem;
     }
     #imageBar img{
         width: 3rem;

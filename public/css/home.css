@@ -1,49 +1,65 @@
 body{
-    /*background-color: rgb(22, 121, 171);*/
-    /*background-color: rgb(255, 255, 255);*/
-    /*background-color: #F4F6FF;*/
-    /*background-image: radial-gradient(circle, #F4F6FF,rgb(188, 189, 210));*/
     background-image: radial-gradient(circle, #F4F6FF,#F5F5F5);
-    height: 110vh;
+    height: 120rem;
 }
-.viewing{
-    height: 110vh;
-    width: 100vw;
+#laptopNav{
+    height: 5vh;
+    width: 3vw;
+    
+}
+.navbar-brand{
+    margin-top: 1rem;
+}
+.navbar-brand{
+    font-family: "Playfair Display", serif;
+    background: linear-gradient(90deg,#21c707,#00c6ff);
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
+    animation: text-animation 2s infinite;
+}
+.sec1{
+    display: inline-flex;
+    background-color: #F5F5F5;
+    height: 29.65rem;
+}
+.sec1 img{
+    float: right;
 }
 .description{
     margin: 0 auto;
-    width: 60rem;
+    width:auto;
     margin-top: 1rem;
     text-align: center;
-    border-left: #00c6ff;
-    border-right: #00c6ff;
-    border-top: #F4F6FF;
-    border-bottom: #F4F6FF;
-    border-style:solid;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
+    float: inline-start;
+}
+.viewing{
+    background-color: #F4F6FF;
+    height: 75rem;
+    width: 90rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 .viewing h2{
     text-decoration: underline;
     text-align: left;
-    margin-left: 5vw;
     font-family: "Playfair Display", serif;
-    /*background-color:  rgb(79, 172, 218);
-    background-image: linear-gradient(to bottom left,#FBF8EF,#C9E6F0, #006A67);*/
     background-image: linear-gradient(to right, rgba(127, 143, 166,0.0), rgba(130, 204, 221,1.0));
     text-align: center;
-    margin-top: 2vh;
-    margin-left: 10vw;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 7.5rem;
     border-radius: 5rem;
-    height: 5vh;
-    width:80vw;
+    height: 2.5rem;
+    width:80rem;
 }
 .viewing button{
-    margin-top: 1vh;
-    height: 5vh;
-    width: 10vw;
+    /*margin-top: 1vh;*/
+    height: 2.5rem;
+    width: 10rem;
 }
-
 .viewing .viewBtn{
     border: none;
     border-radius: 5px;
@@ -60,92 +76,71 @@ body{
     background-size: 200% 100%;
     background-position-x: 150%;
     transition:  0.5s;
+    animation-iteration-count: infinite;
 }
 .viewBtn:hover{
-    animation: shimmer 3s forwards;
+    animation-name: shimmer;
+    animation-duration: 3s;
+    animation-direction: normal;
     scale: 1.1;
 }
 @keyframes shimmer{
-    0%{
+    from{
         background-position-x: 200%;
         background-image: linear-gradient(to right, #00CCDD , #F27BBD);
     }
-    100%{
-        background-position-x: -50%;
-        background-color: #00CCDD;
+    to{
+        background-position-x: -200%;
+        background-image: linear-gradient(to right, #00CCDD , #F27BBD);
     }
 }
-.carousel-item img{
-    height: 80vh;
-    width: 70vh;
-}
-.carousel-item a{
-    margin-top: 3rem;
-}
-
-.carousel-item svg{
-    height:15vh ;
-    width:15vw;
+.viewing img{
+    height:10rem;
+    width:10rem;
     align-items: center;
-    /*margin-left: 30%;*/
     margin-top: 5%;
 }
+#headshotIMG{
+    height: 15rem;
+    width: 12rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-right: 20rem;
+    float: inline-end;
+}
+.row .card{
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+}
 .card{
-    /*background-color: #EAD8B1;*/
+    width: 20rem;
     background-image: radial-gradient(circle,rgba(72, 126, 176,0.0) , rgba(53, 59, 72,1.0));
     justify-content: center;
     text-align: center;
-    height: 40vh;
+    height: 30rem;
     box-shadow: 10px 10px rgba(130, 204, 221,1.0);
+}
+.card-body{
+    overflow-y: auto;
+}
+.card-body::-webkit-scrollbar{
+    width: 4px;
+}
+.card-body::-webkit-scrollbar-thumb{
+    background-color: rgba(53, 59, 72,1.0);
+    border-radius: 4px;
+    
+}
+.card-body::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(53, 59, 72,1.0);
 }
 .card-text{
     font-size: 20px;
 }
-/*
-.carousel-inner{
-    margin-left: 40%;
-    margin-top: 10px;
-    align-content: center;
-}*/
-.carousel-item{
-    
-    height: 40vh;
-    margin-left: 40%;
-    margin-top: 10px;
-    align-items: center;
-}
-#carousel-completed{
-    margin-top: 2vh;
-    height: 45vh;
-    border: 10px;
-}
-#carousel-completed h2{
-    margin-top: 5vh;
-    text-align: center;
-}
-#carousel-completed h3{
-    margin-top: 1vh;
-    text-align: center;
-}
-#carousel-completed a{
-    color:  rgb(22, 121, 171);
-}
-#carousel-inProgress{
-    height: 55vh;
-}
-button.carousel-control{
-    background-color: black;
-    color: black;
-    margin-left: 4rem;
-    
-}
-.navbar-brand{
-    font-family: "Playfair Display", serif;
-    background: linear-gradient(90deg,#21c707,#00c6ff);
-    background-size: 200%;
-    background-clip: text;
-    color: transparent;
-    animation: text-animation 2s infinite;
+.skillsSec{
+    text-align: left;
+    list-style:square;
 }
 @keyframes text-animation{
     0%{
@@ -155,10 +150,105 @@ button.carousel-control{
         background-position: 200%;
     }
 }
+
+#imgSection{
+    width: 59rem;
+    height: 30rem;
+    
+}
+#imageBar{
+    width: 100%;
+    height: 6rem;
+    background-color: #7E99A3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#imageBar img{
+    margin-top: 0.5rem;
+    width: 5rem;
+    height: 5rem;
+}
 footer{
     padding-top: 5vh;
+    margin-top: 2rem;
+    margin: auto 0;
     color: white;
-    height: 20vh;
-    width: 100vw;
+    height: 15rem;
+    width: 100%;
     text-align: center;
+}
+@media only screen and (max-width: 480px) {
+    body{
+        flex-direction: column;
+        width: 22rem;
+        height: 175rem;
+        
+    }
+    .sec1{
+        flex-direction: column;
+        width: 22rem;
+        height: 35rem;
+    }
+    .navbar{
+        width: 25rem;
+    }
+    #laptopNav{
+        width: 2rem;
+        height: 2rem;
+    }
+    .sec1 #headshotIMG{
+        margin: 0;
+        margin-right: 3rem;
+        float: right;
+        height: 10rem;
+        width: 9rem;
+    }
+    .sec1 #imgSection{
+        width: fit-content;
+        height: 14rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    .viewing.container{
+        flex-direction: column;
+        width: 20rem;
+        height: 110rem;
+        margin-left: 1rem;
+    }
+    .row{
+        width: 22rem;
+       
+    }
+    .card{
+        width: 16rem;
+        height: 20rem;
+    }
+    .row h2{
+        width: 15rem;
+        margin-right: 2rem;
+        margin-left: 3.5rem;
+    }
+    .card img{
+        height: 10rem;
+        width: 8rem;
+    }
+    .description{
+        margin-left: 0.5rem;
+        font: size 2rem;;
+        float: none;
+        text-align: left;
+    }
+    #imageBar{
+        height: 8rem;
+        width:25rem;
+    }
+    #imageBar img{
+        width: 3rem;
+        height: 3rem;
+    }
+    .foot.bg-dark{
+        width:25rem;
+    }
 }

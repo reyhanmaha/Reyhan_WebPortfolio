@@ -1,54 +1,45 @@
-/*img{
-    height: 50vh;
-    width: 30rem;
-}*/
 body{
     background-color: rgb(22, 121, 171);
 }
+.container{
+    /*margin-top: 10vh;*/
+    height: 150%;
+    width: 100%;
+}
 .main{
     background-color: rgb(238, 247, 255);
-    width: 40vw;
-    height: 80vh;
-    border-radius: 20%;
-    border-style: groove;
-    
+    width: 50%;
+    height:100%;
+    border-style:hidden;
 }
 .main > *{
     margin-top: 10vh;
 }
+
 .btn{
     background-color: rgb(122, 178, 178);
     width: 30vw;
     height: 20vh;
     font-size:50px;
 }
-.headImage{
+.imageSide img{
+    /*
+    width: 40rem;
+    height: 80vh;*/
+    width: 100%;
+    height: 100%;
+    border-style: hidden;
+    /*margin-left: 15rem;*/
     
 }
-.headImage img{
-    width: 40rem;
-    height: 80vh;
-    border-style: groove;
-    border-radius: 5%;
-    /*margin-left: 15rem;*/
-    margin-left: 1rem;
-}
 @media (min-width: 900px) and (max-width: 1080px) {
-    .headImage img{
+    .imageSide img{
         width: 40rem;
         height: 80vh;
         border-style: groove;
         border-radius: 5%;
-        margin-left: 15rem;
-        
+        margin-left: 15rem;       
     }
-}
-    
-
-.container{
-    margin-top: 10vh;
-    margin-left: 5rem;
-
 }
 h1{
     font-family: "Playfair Display", serif;
@@ -62,26 +53,12 @@ h2{
     font-weight: 400;
     font-style: normal;
 }
-.item{
-    
-}
-
-.header svg{
+.main img{
     height: 5vh;
     width: 5vw;
-    width:"400px"; 
-    height: "400px";
-}
-.main a{
-
-}
-.main button svg{
-    width: 10vw;
-    height: 10vh;
-    float:right;
-    
 }
 #rightArrow{
-    height: 15vh;
-    width: 15vw;
+    height: 10vh;
+    width: 10vw;
+    float: right;
 }

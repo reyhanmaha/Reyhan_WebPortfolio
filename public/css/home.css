@@ -210,6 +210,7 @@ footer{
         height: 14rem;
         margin-top: 1rem;
         margin-left: 1rem;
+        
     }
     .viewing.container{
         flex-direction: column;
@@ -244,6 +245,7 @@ footer{
         height: 8rem;
         width:100%;
         margin-top: 3rem;
+        float: inline-end;
     }
     #imageBar img{
         width: 3rem;

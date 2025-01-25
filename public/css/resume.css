@@ -1,44 +1,76 @@
 body{
     background-color: rgb(22, 121, 171);
+    height: 120rem;
 }
+
+
 .resumePage{
-    background-color: white;
+    background-color: #FBFBFB;
     border-style: groove;
     border-radius: 6%;
-    border-color: white;
+    border-color: #FBFBFB;
     margin-top: 2%;
     margin-bottom: 4%;
     margin-left: 20vw;
     height: 110rem;
     width: 60vw;
 }
+
 .contactInfo{
     margin-top: 3vh;
+    margin: auto 0;
     text-align: center;
 }
-.line2{
-    margin-top: 5%;
-    margin-left: 5vw;
-}
-.line3{
-    margin-top: 5%;
-    margin-left: 5vw;
-}
-.line4{
-    margin-top: 5%;
-    margin-left: 5vw;
-}
-.traits{
-    margin-right: 4rem;
-}
-.extraSkills{
-    margin-top: 2rem;
-}
-.awards{
-    margin-top: 2rem;
-    margin-right: 2rem;
-}
+
+
 .special{
     text-decoration: underline;
     font-weight: bold;
+}
+@media only screen and (max-width: 480px) {
+    body{
+        height: 105rem;
+        width: 35rem;
+
+    }
+    p, li{
+        font-size: x-small;
+    }
+    .resumePage{
+        height: 90rem;
+        width: 30rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+    .contactInfo{
+        height: 8rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    h5{
+        font-size: smaller;
+    }
+    .section1{
+
+    }
+    .section2{
+        height: 80rem;
+    }
+    /*
+    .line2{
+        height: 20rem;
+    }
+    .line3{
+        height: 60rem;
+    }
+    .line4{
+        height: 20rem;
+    }
+    .special{
+        
+    }
+    .traits{
+        height: 20rem;
+    }
+        */
 }

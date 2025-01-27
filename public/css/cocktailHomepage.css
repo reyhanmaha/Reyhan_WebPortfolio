@@ -88,3 +88,25 @@ svg{
     margin-right: 1rem;
     background-color:gray;
 }
+@media only screen and (max-width: 480px) {
+    body{
+        margin: 0%;
+        padding: 0%;
+        width:48rem;
+        box-sizing: border-box;
+    }
+    .ad{
+        width: 3rem;
+    }
+    .card{
+        width: 10rem;
+
+    }
+    .card img{
+        width: 7rem;
+        margin: auto 0;
+    }
+    .drinks{
+        width: 30rem;
+    }
+}

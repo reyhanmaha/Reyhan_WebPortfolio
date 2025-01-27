@@ -83,12 +83,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
-//app.use(express.static(path.join(__dirname, 'public')));
-/*
-app.get("/",(req,res)=>{
-    res.render("index");
-});
-*/
+
 app.get("/",(req,res)=>{
     res.render("home");
 });
@@ -109,7 +104,6 @@ app.get("/blogHomePage",(req,res)=>{
     //let posts=[];
     res.render("blogHomePage",{posts:data});
 });
-
 app.post("/blogHomePage",(req,res)=>{
     //let posts=[];
     data.push(req.body['posts']);
@@ -117,6 +111,7 @@ app.post("/blogHomePage",(req,res)=>{
     console.log(data);
     res.render("blogHomePage",{posts:data});
 });
+
 
 app.post("/removePost",(req,res)=>{
     let value=req.body["index"];
@@ -145,7 +140,7 @@ app.get("/cocktailHomepage",async (req,res)=>{
     try {
         const options = {
             method: 'GET',
-            url: 'https://the-cocktail-db3.p.rapidapi.com/',
+            //url: 'https://the-cocktail-db3.p.rapidapi.com/',
             headers: {
               'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
               'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'

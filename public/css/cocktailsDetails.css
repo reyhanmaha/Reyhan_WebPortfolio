@@ -67,7 +67,7 @@ svg{
 
     .detailsText{
         margin-top: 1rem;
-        
+        margin-left: 0.5rem;
         }
         /*
     .detailsImg{
@@ -81,6 +81,9 @@ svg{
     .detailsImg img{
         height: 10rem;
         width: 10rem;
+        margin-left: 0.5rem;
     }
-    
+    .detailsLower{
+        margin-left: 1rem;
+    }
 }

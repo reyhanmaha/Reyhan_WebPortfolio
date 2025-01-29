@@ -140,7 +140,7 @@ app.get("/cocktailHomepage",async (req,res)=>{
     try {
         const options = {
             method: 'GET',
-            //url: 'https://the-cocktail-db3.p.rapidapi.com/',
+            url: 'https://the-cocktail-db3.p.rapidapi.com/',
             headers: {
               'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
               'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
@@ -166,7 +166,7 @@ app.post("/cocktailHomepage",async (req,res)=>{
     try {
         const options = {
             method: 'GET',
-            //url: 'https://the-cocktail-db3.p.rapidapi.com/',
+            url: 'https://the-cocktail-db3.p.rapidapi.com/',
             headers: {
                 'x-rapidapi-key': '1942c9e20cmshed1754f2cb0a7d9p16ebe7jsn386a2f493715',
                 'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'

@@ -57,3 +57,30 @@ svg{
     margin-right: 1rem;
     background-color:gray;
 }
+@media only screen and (max-width: 480px) {
+    body{
+        width: 30rem;
+    }
+    .ad{
+        width: 2rem;
+    }
+
+    .detailsText{
+        margin-top: 1rem;
+        
+        }
+        /*
+    .detailsImg{
+        width: 10rem;
+    }
+    .drinks{
+        flex-direction: column;
+        width: 24rem;
+    }
+    */
+    .detailsImg img{
+        height: 10rem;
+        width: 10rem;
+    }
+    
+}

@@ -109,4 +109,8 @@ svg{
     .drinks{
         width: 30rem;
     }
+    .d-flex{
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+    }
 }

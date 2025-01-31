@@ -91,3 +91,15 @@ svg{
         background-position: 200%;
     }
 } 
+@media only screen and (max-width: 480px) {
+    .Introcard{
+        height: 65rem;
+    }
+    .Introcard img{
+        width: 10rem;
+    }
+    .contact h2{
+        width: 10rem;
+        
+    }
+}

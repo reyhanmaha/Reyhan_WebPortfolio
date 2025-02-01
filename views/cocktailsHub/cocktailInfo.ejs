@@ -22,19 +22,14 @@
         </defs>
         </svg></a>
       <a class="navbar-brand" >Cocktail's Hub</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/cocktailHomepage">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/info">Info</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/cocktailHomepage">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/info">Info</a>
+        </li>
+      </ul>
     </div>
     <form class="d-flex" role="search" action="/searchDrink" method="post">
           <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
@@ -53,7 +48,6 @@
                   <p>The Cocktails Hub is an Express WebApp that provides interested users with detailed information regarding cocktails.
                     The aim is to give users who are interested in making cocktails for recreational, commercial use or otherwise a repository of information that could aid them in their research.
                     All information on drinks were retrieved from an API named The Cocktail DB which in turn was retrieved from RapidAPI(https://rapidapi.com/) however in the event the API becomes unavailable due to technical errors, backup data has been provided.
-
                   </p>
                 </div>
             </div>

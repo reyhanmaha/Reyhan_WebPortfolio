@@ -59,16 +59,34 @@ svg{
 }
 @media only screen and (max-width: 480px) {
     body{
-        width: 30rem;
+        /*width: 30rem;*/
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
     .ad{
         width: 2rem;
+    }
+    .container{
+        width: 100%;
+    }
+    .row{
+        width: 100%;
     }
 
     .detailsText{
         margin-top: 1rem;
         margin-left: 0.5rem;
-        }
+
+    }
+    .d-flex{
+        width: 55%;
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        
+    }
+
         /*
     .detailsImg{
         width: 10rem;
@@ -84,6 +102,6 @@ svg{
         margin-left: 0.5rem;
     }
     .detailsLower{
-        margin-left: 1rem;
+        margin-left: 0.5rem;
     }
 }

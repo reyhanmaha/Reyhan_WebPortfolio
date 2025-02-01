@@ -136,6 +136,7 @@ app.post("/editPost",(req,res)=>{
     res.redirect("blogHomePage");
 });
 
+let drinksApiInfo;
 app.get("/cocktailHomepage",async (req,res)=>{
     try {
         const options = {
@@ -146,9 +147,10 @@ app.get("/cocktailHomepage",async (req,res)=>{
               'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
             }
           };  
-            const response = await axios.request(options);
+            //const response = await axios.request(options);
             //console.log(response.data);
-            res.render("cocktailsHub/cocktailHomepage",{drinks:response.data});
+            drinksApiInfo = await axios.request(options);
+            res.render("cocktailsHub/cocktailHomepage",{drinks:drinksApiInfo.data});
         } catch (error) {
             console.error(error);
         }
@@ -164,7 +166,7 @@ app.post("/cocktailHomepage",async (req,res)=>{
     let mediumCocktails = [];
     let response;
     try {
-        const options = {
+        /*const options = {
             method: 'GET',
             url: 'https://the-cocktail-db3.p.rapidapi.com/',
             headers: {
@@ -172,10 +174,10 @@ app.post("/cocktailHomepage",async (req,res)=>{
                 'x-rapidapi-host': 'the-cocktail-db3.p.rapidapi.com'
             }
         };
-        response = await axios.request(options);
-        if (response) {
+        response = await axios.request(options);*/
+        if (drinksApiInfo) {
             console.log("HERE");
-            const info = response.data;
+            const info = drinksApiInfo.data;
             if (req.body['easyDrinks']) {
                 let item;
                 for (let index = 0; index < info.length; index++) {
